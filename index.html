@@ -137,6 +137,45 @@
         }
         .stat-l { font-size: .7rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
 
+        /* ======================== SPONSORS ======================== */
+        .sponsors-container {
+            margin-top: 3.5rem;
+            border-top: 1px dashed var(--border);
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .sponsors-title {
+            font-family: var(--f-title);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .sponsors-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .sponsor-logo-img {
+            object-fit: contain;
+            opacity: 0.45;
+            filter: brightness(0) invert(1);
+            transition: opacity 0.3s ease;
+        }
+
+        .sponsor-logo-img:hover {
+            opacity: 0.95;
+        }
+
         /* ======================== TRILHAS ======================== */
         main { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
 
@@ -330,6 +369,15 @@
             <div class="stat">
                 <span class="stat-n">5</span>
                 <span class="stat-l">Linguagens</span>
+            </div>
+        </div>
+
+        <div class="sponsors-container">
+            <p class="sponsors-title">Realização & Patrocínio · Liga STEAM</p>
+            <div class="sponsors-logos">
+                <img src="./assets/sponsors/proz.png" alt="Proz Educação" class="sponsor-logo-img" style="height: 28px;">
+                <img src="./assets/sponsors/arcelormittal.png" alt="ArcelorMittal" class="sponsor-logo-img" style="height: 30px;">
+                <img src="./assets/sponsors/cbmm.png" alt="CBMM" class="sponsor-logo-img" style="height: 24px;">
             </div>
         </div>
     </div>
