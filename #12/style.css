@@ -1,0 +1,366 @@
+/* ----------------------------------------------------
+   Estilos Globais e Variáveis (Princípio DRY)
+   ---------------------------------------------------- */
+:root {
+    /* Paleta de Cores (Inspirada no Recife - Sol, Mar e Cultura) */
+    --color-primary: #e65c00;      /* Laranja Solar/Frevo */
+    --color-secondary: #0077b6;    /* Azul Oceano */
+    --color-accent: #ffb703;       /* Amarelo Ouro */
+    --color-bg-body: #fbfbf9;      /* Areia Clara */
+    --color-bg-card: #ffffff;      /* Branco Puro */
+    --color-text-main: #2b2d42;    /* Grafite Escuro */
+    --color-text-muted: #6c757d;   /* Cinza */
+    --color-header-overlay: rgba(0, 15, 30, 0.6);
+    --color-bg-dark: #0f172a;      /* Slate Escuro */
+
+    /* Tipografia */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* Efeitos e Bordas */
+    --border-radius: 16px;
+    --transition-speed: 0.3s;
+    --transition-curve: cubic-bezier(0.25, 0.8, 0.25, 1);
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Reset Padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-body);
+    color: var(--color-text-main);
+    line-height: 1.7;
+}
+
+/* ----------------------------------------------------
+   Cabeçalho / Hero Section (Comum para ambas as páginas)
+   ---------------------------------------------------- */
+header {
+    background: linear-gradient(var(--color-header-overlay), var(--color-header-overlay)), 
+                url('https://marcozero.blog.br/wp-content/uploads/2024/03/marco-zero-recife-770x400.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 140px 20px;
+    position: relative;
+}
+
+/* Menu de Navegação */
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.nav-logo span {
+    color: var(--color-accent);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color var(--transition-speed) ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Conteúdo Hero */
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ----------------------------------------------------
+   Conteúdo Principal
+   ---------------------------------------------------- */
+main {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Seções de Texto (Introdução e Pontos Turísticos) */
+.intro-section, .tourist-section {
+    background-color: var(--color-bg-card);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 50px;
+}
+
+.intro-section h2, .tourist-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    border-left: 5px solid var(--color-primary);
+    padding-left: 15px;
+}
+
+.intro-section p, .tourist-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.tourist-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ----------------------------------------------------
+   Mídia e Imagens (Responsivas e Estilizadas)
+   ---------------------------------------------------- */
+.image-wrapper {
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed) var(--transition-curve);
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.03);
+}
+
+/* ----------------------------------------------------
+   Grid de Cards (Página do Marco Zero)
+   ---------------------------------------------------- */
+.attractions-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--color-secondary);
+    margin-bottom: 40px;
+}
+
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.attraction-card {
+    background-color: var(--color-bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed) var(--transition-curve), 
+                box-shadow var(--transition-speed) var(--transition-curve);
+}
+
+.attraction-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-wrapper {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--transition-curve);
+}
+
+.attraction-card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--color-text-main);
+    margin-bottom: 12px;
+}
+
+.card-info p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+/* ----------------------------------------------------
+   Seção de Navegação (Links entre páginas)
+   ---------------------------------------------------- */
+.navigation-section {
+    text-align: center;
+    background-color: var(--color-bg-card);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    font-size: 1.1rem;
+    margin-top: 40px;
+}
+
+.navigation-section a {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    transition: color var(--transition-speed) ease;
+}
+
+.navigation-section a:hover {
+    color: var(--color-secondary);
+}
+
+/* ----------------------------------------------------
+   Tags Semânticas Inline / Estilização
+   ---------------------------------------------------- */
+strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+em {
+    color: var(--color-secondary);
+    font-style: italic;
+    font-weight: 600;
+}
+
+mark {
+    background-color: var(--color-accent);
+    color: var(--color-text-main);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+abbr {
+    border-bottom: 1px dashed var(--color-primary);
+    cursor: help;
+}
+
+time {
+    background-color: #e2e8f0;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+cite {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    border-left: 3px solid #cbd5e0;
+    padding-left: 10px;
+    display: block;
+    margin: 15px 0;
+}
+
+/* ----------------------------------------------------
+   Rodapé (Footer)
+   ---------------------------------------------------- */
+footer {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #94a3b8;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+}
+
+footer p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed) ease;
+}
+
+footer a:hover {
+    color: var(--color-primary);
+}
+
+/* ----------------------------------------------------
+   Responsividade
+   ---------------------------------------------------- */
+@media (max-width: 768px) {
+    header {
+        padding: 100px 20px;
+    }
+    
+    .nav-bar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .intro-section, .tourist-section {
+        padding: 25px;
+    }
+
+    .attractions-grid {
+        grid-template-columns: 1fr; /* 1 card por linha em telas pequenas */
+    }
+
+    .image-wrapper {
+        height: 280px; /* Reduz altura da imagem no mobile */
+    }
+}
