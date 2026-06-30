@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades Proz — Marentropico</title>
+    <meta name="description" content="Portfólio de atividades do curso Proz Educação — Marcos Paulo Figueroa (Marentropico). Python, HTML, CSS, JavaScript, SQL e Projeto de Vida.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* ---- Reset ---- */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg:       #0A0A0A;
+            --bg-alt:   #111;
+            --card:     #161616;
+            --border:   rgba(255,255,255,0.07);
+            --text:     #E8E0D4;
+            --muted:    #6A6260;
+            --terra:    #C4622D;
+            --verde:    #1E8449;
+            --azul:     #1A5276;
+            --roxo:     #6B3FA0;
+            --teal:     #2C7873;
+            --gold:     #B8860B;
+            --f-title:  'Montserrat', sans-serif;
+            --f-body:   'Open Sans', sans-serif;
+            --r:        10px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--f-body);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* ---- Progress bar ---- */
+        #prog {
+            position: fixed; top: 0; left: 0;
+            height: 3px; width: 0;
+            background: linear-gradient(90deg, var(--terra), #D4812A);
+            z-index: 100;
+            transition: width .1s linear;
+        }
+
+        /* ======================== HERO ======================== */
+        .hero {
+            position: relative;
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 5rem 1.5rem 4rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-grid {
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+            background-size: 55px 55px;
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute; border-radius: 50%;
+            filter: blur(100px); pointer-events: none;
+            animation: breathe 9s ease-in-out infinite alternate;
+        }
+        .o1 { width:550px;height:550px;background:var(--terra);top:-220px;left:-180px;opacity:.15; }
+        .o2 { width:400px;height:400px;background:var(--verde);bottom:-160px;right:-120px;opacity:.13;animation-delay:4s; }
+        .o3 { width:280px;height:280px;background:var(--roxo);top:40%;left:55%;opacity:.1;animation-delay:7s; }
+
+        @keyframes breathe {
+            from { opacity:.08; transform:scale(1); }
+            to   { opacity:.2;  transform:scale(1.1); }
+        }
+
+        .hero-inner { position: relative; z-index: 1; max-width: 720px; }
+
+        .hero-tag {
+            font-family: var(--f-title);
+            font-size: .68rem; font-weight: 700;
+            letter-spacing: .22em; text-transform: uppercase;
+            color: var(--terra); margin-bottom: 1.2rem;
+        }
+
+        .hero-name {
+            font-family: var(--f-title);
+            font-size: clamp(3rem, 10vw, 6.5rem);
+            font-weight: 900; letter-spacing: -.03em; line-height: .95;
+            margin-bottom: 1.2rem;
+        }
+        .hero-name span {
+            background: linear-gradient(135deg, var(--terra) 0%, #D4812A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            font-size: .88rem; color: var(--muted);
+            letter-spacing: .04em; margin-bottom: 2rem;
+        }
+
+        .hero-pills {
+            display: flex; flex-wrap: wrap; gap: .5rem;
+            justify-content: center; margin-bottom: 2.5rem;
+        }
+
+        .pill {
+            background: rgba(255,255,255,.04);
+            border: 1px solid var(--border);
+            color: var(--muted);
+            font-size: .72rem; font-weight: 600;
+            padding: .35rem .85rem; border-radius: 50px;
+            letter-spacing: .03em;
+        }
+
+        .hero-stats {
+            display: flex; gap: 2.5rem; justify-content: center;
+        }
+
+        .stat { text-align: center; }
+        .stat-n {
+            font-family: var(--f-title); font-size: 2.2rem; font-weight: 900;
+            color: var(--terra); line-height: 1; display: block;
+        }
+        .stat-l { font-size: .7rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+
+        /* ======================== TRILHAS ======================== */
+        main { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
+
+        .trilha {
+            padding: 5rem 0 2rem;
+        }
+
+        .trilha-header {
+            display: flex; align-items: center; gap: 1.2rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .trilha-icon { font-size: 2rem; }
+
+        .trilha-info {}
+        .trilha-label {
+            font-family: var(--f-title); font-size: .65rem; font-weight: 700;
+            letter-spacing: .18em; text-transform: uppercase;
+            color: var(--terra); display: block; margin-bottom: .2rem;
+        }
+        .trilha-title {
+            font-family: var(--f-title); font-size: 1.3rem; font-weight: 900;
+            line-height: 1.2;
+        }
+        .trilha-count {
+            margin-left: auto;
+            font-family: var(--f-title); font-size: .7rem; font-weight: 700;
+            letter-spacing: .08em; text-transform: uppercase;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        /* ======================== GRID DE CARDS ======================== */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        /* ======================== ACTIVITY CARD ======================== */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--r);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent, var(--terra));
+            box-shadow: 0 12px 40px rgba(0,0,0,.4);
+        }
+
+        .card-accent {
+            height: 3px;
+            background: var(--accent, var(--terra));
+        }
+
+        .card-body {
+            padding: 1.3rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-num {
+            font-family: var(--f-title); font-size: .62rem; font-weight: 700;
+            letter-spacing: .15em; text-transform: uppercase;
+            color: var(--accent, var(--terra)); margin-bottom: .6rem;
+            display: flex; align-items: center; gap: .5rem;
+        }
+
+        .card-num::after {
+            content: ''; flex: 1; height: 1px;
+            background: rgba(255,255,255,.05);
+        }
+
+        .card-title {
+            font-family: var(--f-title); font-size: .88rem; font-weight: 700;
+            color: var(--text); line-height: 1.4; margin-bottom: .5rem;
+        }
+
+        .card-desc {
+            font-size: .76rem; color: var(--muted);
+            line-height: 1.6; flex: 1; margin-bottom: 1rem;
+        }
+
+        .card-footer {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-top: .8rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .card-type {
+            font-size: .62rem; font-weight: 700;
+            letter-spacing: .08em; text-transform: uppercase;
+            padding: .25rem .6rem; border-radius: 50px;
+            border: 1px solid var(--border); color: var(--muted);
+        }
+
+        .card-cta {
+            font-family: var(--f-title); font-size: .7rem; font-weight: 700;
+            color: var(--accent, var(--terra));
+            letter-spacing: .05em;
+        }
+
+        /* Card sem link clicável (code-only) */
+        .card.no-link {
+            cursor: default;
+            opacity: .75;
+        }
+        .card.no-link:hover {
+            transform: none;
+            box-shadow: none;
+            border-color: var(--border);
+        }
+
+        /* ======================== FOOTER ======================== */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: var(--f-title); font-size: 1.2rem; font-weight: 900;
+            margin-bottom: .5rem;
+        }
+        .footer-logo span { color: var(--terra); }
+
+        .site-footer p { font-size: .78rem; color: var(--muted); line-height: 2; }
+        .site-footer a { color: var(--terra); text-decoration: none; }
+        .site-footer a:hover { text-decoration: underline; }
+
+        /* ======================== RESPONSIVO ======================== */
+        @media (max-width: 600px) {
+            .hero-stats { gap: 1.5rem; }
+            .stat-n     { font-size: 1.8rem; }
+            .trilha-count { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<!-- ======================== HERO ======================== -->
+<header class="hero">
+    <div class="hero-grid"></div>
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+
+    <div class="hero-inner">
+        <p class="hero-tag">Portfólio de Atividades · Proz Educação · 2026</p>
+
+        <h1 class="hero-name">
+            Mar<span>entropico</span>
+        </h1>
+
+        <p class="hero-sub">Marcos Paulo Figueroa · Grajaú, São Paulo</p>
+
+        <div class="hero-pills">
+            <span class="pill">🐍 Python</span>
+            <span class="pill">🌐 HTML & CSS</span>
+            <span class="pill">⚡ JavaScript</span>
+            <span class="pill">🗄️ SQL</span>
+            <span class="pill">🎯 Projeto de Vida</span>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-n">27</span>
+                <span class="stat-l">Atividades</span>
+            </div>
+            <div class="stat">
+                <span class="stat-n">4</span>
+                <span class="stat-l">Trilhas</span>
+            </div>
+            <div class="stat">
+                <span class="stat-n">5</span>
+                <span class="stat-l">Linguagens</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- ======================== TRILHA 1 · PYTHON ======================== -->
+    <section class="trilha" id="python">
+        <div class="trilha-header">
+            <span class="trilha-icon">🐍</span>
+            <div class="trilha-info">
+                <span class="trilha-label">Trilha 1</span>
+                <h2 class="trilha-title">Fundamentos de Python</h2>
+            </div>
+            <span class="trilha-count">Atividades #1 – #6</span>
+        </div>
+
+        <div class="cards-grid">
+
+            <div class="card no-link" style="--accent:#3776AB;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 01</p>
+                    <h3 class="card-title">Olá Mundo & Tipos de Dados</h3>
+                    <p class="card-desc">Primeiro programa em Python. Exploração de tipos primitivos: int, float, string e boolean com exemplos práticos.</p>
+                    <div class="card-footer">
+                        <span class="card-type">Python · .py</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#3776AB;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 02</p>
+                    <h3 class="card-title">Variáveis & Operadores</h3>
+                    <p class="card-desc">Declaração de variáveis, operadores aritméticos, relacionais e lógicos. Uso de f-strings para saída formatada.</p>
+                    <div class="card-footer">
+                        <span class="card-type">Python · .py</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#3776AB;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 03</p>
+                    <h3 class="card-title">Estruturas Condicionais</h3>
+                    <p class="card-desc">Controle de fluxo com if, elif e else. Tomada de decisão aplicada a cenários do cotidiano.</p>
+                    <div class="card-footer">
+                        <span class="card-type">Python · .py</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#3776AB;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 04</p>
+                    <h3 class="card-title">Laços de Repetição</h3>
+                    <p class="card-desc">Estruturas for e while para automação e iteração. Uso de range(), break e continue.</p>
+                    <div class="card-footer">
+                        <span class="card-type">Python · .py</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#3776AB;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 05</p>
+                    <h3 class="card-title">Listas & Funções</h3>
+                    <p class="card-desc">Manipulação de listas (append, remove, index). Criação de funções com parâmetros e retorno de valores.</p>
+                    <div class="card-footer">
+                        <span class="card-type">Python · .py</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#3776AB;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 06</p>
+                    <h3 class="card-title">Dicionários & Estruturas Compostas</h3>
+                    <p class="card-desc">Pares chave-valor, iteração sobre dicionários, estruturas aninhadas e aplicações práticas de organização de dados.</p>
+                    <div class="card-footer">
+                        <span class="card-type">Python · .py</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== TRILHA 2 · HTML & CSS ======================== -->
+    <section class="trilha" id="web">
+        <div class="trilha-header">
+            <span class="trilha-icon">🌐</span>
+            <div class="trilha-info">
+                <span class="trilha-label">Trilha 2</span>
+                <h2 class="trilha-title">HTML, CSS & JavaScript</h2>
+            </div>
+            <span class="trilha-count">Atividades #7 – #19</span>
+        </div>
+
+        <div class="cards-grid">
+
+            <a class="card" href="./%237/atividade7.html" target="_blank" style="--accent:#E34F26;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 07</p>
+                    <h3 class="card-title">Primeira Página HTML</h3>
+                    <p class="card-desc">Estrutura base HTML5. Tags semânticas, headings, parágrafos e links. Primeira página web do curso.</p>
+                    <div class="card-footer">
+                        <span class="card-type">HTML</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card" href="./%238/atividade8.html" target="_blank" style="--accent:#264DE4;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 08</p>
+                    <h3 class="card-title">CSS Externo & Variáveis DRY</h3>
+                    <p class="card-desc">Separação HTML/CSS, variáveis CSS (:root), seletores, box model e princípios DRY aplicados ao estilo.</p>
+                    <div class="card-footer">
+                        <span class="card-type">HTML + CSS</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card" href="./%239/index.html" target="_blank" style="--accent:#E34F26;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 09</p>
+                    <h3 class="card-title">Marco Zero — HTML Semântico</h3>
+                    <p class="card-desc">Projeto Marco Zero de Recife. Página sem estilo, focada em semântica: article, section, figure, nav e aside.</p>
+                    <div class="card-footer">
+                        <span class="card-type">HTML Semântico</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card" href="./%2310/index.html" target="_blank" style="--accent:#E34F26;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 10</p>
+                    <h3 class="card-title">Multi-página — Outros Pontos</h3>
+                    <p class="card-desc">Expansão do projeto com segunda página (Outros Pontos Turísticos) e navegação entre arquivos HTML via links relativos.</p>
+                    <div class="card-footer">
+                        <span class="card-type">HTML · Multi-página</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card" href="./%2311/index.html" target="_blank" style="--accent:#264DE4;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 11</p>
+                    <h3 class="card-title">Marco Zero — Estilizado</h3>
+                    <p class="card-desc">Versão completa e estilizada do projeto Marco Zero. CSS com variáveis, gradientes, hover effects e layout responsivo.</p>
+                    <div class="card-footer">
+                        <span class="card-type">HTML + CSS Completo</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card" href="./%2312/index.html" target="_blank" style="--accent:#264DE4;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 12</p>
+                    <h3 class="card-title">Flexbox & Layout</h3>
+                    <p class="card-desc">Aplicação de Flexbox no projeto. Propriedades: justify-content, align-items, flex-wrap, gap. Layout adaptável a múltiplas telas.</p>
+                    <div class="card-footer">
+                        <span class="card-type">CSS Flexbox</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="card no-link" style="--accent:#264DE4;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 13</p>
+                    <h3 class="card-title">Por que o YouTube usa JavaScript?</h3>
+                    <p class="card-desc">Análise crítica da barra de busca do YouTube: por que HTML e CSS não são suficientes para interatividade dinâmica.</p>
+                    <div class="card-footer">
+                        <span class="card-type">Texto reflexivo · .txt</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#264DE4;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 14</p>
+                    <h3 class="card-title">Configuração de Ambiente</h3>
+                    <p class="card-desc">Documentação das extensões do VSCode instaladas: Live Preview, Prettier, Tailwind IntelliSense e Language Pack PT-BR.</p>
+                    <div class="card-footer">
+                        <span class="card-type">Texto reflexivo · .txt</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#F7DF1E;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 15</p>
+                    <h3 class="card-title">Lógica JS — Números da Sorte</h3>
+                    <p class="card-desc">Estruturas condicionais e laços em JavaScript puro. Avaliação de paridade e magnitude de números aleatórios via Node.js.</p>
+                    <div class="card-footer">
+                        <span class="card-type">JavaScript · Node.js</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <a class="card" href="./%2316/index.html" target="_blank" style="--accent:#F7DF1E;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 16</p>
+                    <h3 class="card-title">Conexão HTML ↔ JavaScript</h3>
+                    <p class="card-desc">Vinculação de arquivo JS externo ao HTML via tag &lt;script&gt;. Função executada três vezes, verificável no console do navegador.</p>
+                    <div class="card-footer">
+                        <span class="card-type">HTML + JS</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <a class="card" href="./%2317/index.html" target="_blank" style="--accent:#F7DF1E;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 17</p>
+                    <h3 class="card-title">Manipulação do DOM</h3>
+                    <p class="card-desc">Captura de elementos por ID. Inserção de conteúdo com .innerText e .innerHTML. Listas com links via JavaScript.</p>
+                    <div class="card-footer">
+                        <span class="card-type">JS · DOM</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="card no-link" style="--accent:#F7DF1E;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 18</p>
+                    <h3 class="card-title">Funções & Template Strings</h3>
+                    <p class="card-desc">Função que recebe dois parâmetros e imprime as quatro operações básicas usando template literals (backticks).</p>
+                    <div class="card-footer">
+                        <span class="card-type">JavaScript · Node.js</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <a class="card" href="./%2319/index.html" target="_blank" style="--accent:#F7DF1E;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 19</p>
+                    <h3 class="card-title">Criação de Elementos no DOM</h3>
+                    <p class="card-desc">Método simples (innerHTML) e método complexo (createElement + appendChild) para inserir elementos dinamicamente na página.</p>
+                    <div class="card-footer">
+                        <span class="card-type">JS · DOM Avançado</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ======================== TRILHA 3 · SQL ======================== -->
+    <section class="trilha" id="sql">
+        <div class="trilha-header">
+            <span class="trilha-icon">🗄️</span>
+            <div class="trilha-info">
+                <span class="trilha-label">Trilha 3</span>
+                <h2 class="trilha-title">Banco de Dados com SQL</h2>
+            </div>
+            <span class="trilha-count">Atividades #20 – #24</span>
+        </div>
+
+        <div class="cards-grid">
+
+            <div class="card no-link" style="--accent:#336791;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 20</p>
+                    <h3 class="card-title">Banco ESCOLA & Tabela ALUNO</h3>
+                    <p class="card-desc">CREATE DATABASE, CREATE TABLE, PRIMARY KEY. Atributos: ID, nome, e-mail, endereço. Banco pronto para uso.</p>
+                    <div class="card-footer">
+                        <span class="card-type">SQL · DDL</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#336791;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 21</p>
+                    <h3 class="card-title">Banco BIBLIOTECA — JOINs</h3>
+                    <p class="card-desc">Tabelas relacionadas via FOREIGN KEY (AUTOR → LIVRO). Consultas com INNER JOIN e LEFT JOIN para cruzamento de dados.</p>
+                    <div class="card-footer">
+                        <span class="card-type">SQL · Relacionamentos</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#336791;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 22</p>
+                    <h3 class="card-title">Triggers — Controle de Estoque</h3>
+                    <p class="card-desc">TRIGGER AFTER INSERT em tabela de vendas. Atualização automática do estoque de produtos a cada nova venda registrada.</p>
+                    <div class="card-footer">
+                        <span class="card-type">SQL · Triggers</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#336791;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 23</p>
+                    <h3 class="card-title">Stored Procedure — Relatório Diário</h3>
+                    <p class="card-desc">PROCEDURE sp_relatorio_compras_diarias. Consulta parametrizada por data para levantamento de compras realizadas no dia.</p>
+                    <div class="card-footer">
+                        <span class="card-type">SQL · Procedures</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card no-link" style="--accent:#336791;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Atividade 24</p>
+                    <h3 class="card-title">Stored Function — Cadastros por Dia</h3>
+                    <p class="card-desc">FUNCTION fn_total_clientes_por_dia. Retorna COUNT() de clientes cadastrados em uma data específica. Uso de READS SQL DATA.</p>
+                    <div class="card-footer">
+                        <span class="card-type">SQL · Functions</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== TRILHA 4 · PROJETO DE VIDA ======================== -->
+    <section class="trilha" id="vida">
+        <div class="trilha-header">
+            <span class="trilha-icon">🎯</span>
+            <div class="trilha-info">
+                <span class="trilha-label">Trilha 4</span>
+                <h2 class="trilha-title">Projeto de Vida com Ferramentas Digitais</h2>
+            </div>
+            <span class="trilha-count">Atividades 1 – 3</span>
+        </div>
+
+        <div class="cards-grid">
+
+            <a class="card" href="./Projeto%20de%20Vida%20com%20Ferramentas%20Digitais/Atividade%201/index.html" target="_blank" style="--accent:#C4622D;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Projeto de Vida · 01</p>
+                    <h3 class="card-title">Mapa de Metas Pessoais</h3>
+                    <p class="card-desc">Página interativa com metas de curto, médio e longo prazo organizadas em colunas visuais. Baseado na identidade real do autor.</p>
+                    <div class="card-footer">
+                        <span class="card-type">HTML + CSS</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+            <div class="card no-link" style="--accent:#C4622D;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Projeto de Vida · 02</p>
+                    <h3 class="card-title">Plano de Ação Pessoal</h3>
+                    <p class="card-desc">Documento Markdown com 3 categorias de vida, tarefas classificadas pela Matriz de Eisenhower, prazos e recursos para as próximas 2 semanas.</p>
+                    <div class="card-footer">
+                        <span class="card-type">Markdown · .md</span>
+                        <span class="card-cta">Código no repo ↗</span>
+                    </div>
+                </div>
+            </div>
+
+            <a class="card" href="./Projeto%20de%20Vida%20com%20Ferramentas%20Digitais/Atividade%203/index.html" target="_blank" style="--accent:#C4622D;">
+                <div class="card-accent"></div>
+                <div class="card-body">
+                    <p class="card-num">Projeto de Vida · 03</p>
+                    <h3 class="card-title">Marketing Pessoal — Apresentação</h3>
+                    <p class="card-desc">Apresentação web com scroll reveal cobrindo: quem sou, projeto de vida, plano de ação, diferenciais e mensagem final. Identidade Marentropico.</p>
+                    <div class="card-footer">
+                        <span class="card-type">HTML + CSS + JS</span>
+                        <span class="card-cta">Ver página ↗</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="site-footer">
+    <div class="footer-logo">Mar<span>entropico</span>.</div>
+    <p>Marcos Paulo Figueroa · Grajaú, São Paulo · 2026</p>
+    <p>
+        <a href="https://umimbae.com.br" target="_blank" rel="noopener">umimbae.com.br</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/marentropico/atividades-proz" target="_blank" rel="noopener">github.com/marentropico/atividades-proz</a>
+    </p>
+    <p style="margin-top:.5rem;">Proz Educação · Portfólio de Atividades · Julho 2026</p>
+</footer>
+
+<script>
+    // Barra de progresso
+    const bar = document.getElementById('prog');
+    window.addEventListener('scroll', () => {
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+    }, { passive: true });
+</script>
+</body>
+</html>
