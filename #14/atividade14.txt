@@ -1,0 +1,20 @@
+Para a atividade de hoje, decidi compartilhar sobre o conjunto de extensões que utilizo no meu dia a dia no VSCode para otimizar meu fluxo de trabalho no desenvolvimento de projetos web (HTML, CSS e Tailwind CSS).
+
+Aqui estão as extensões selecionadas e os motivos pelos quais elas facilitam a escrita do código:
+
+1. Live Preview (da Microsoft):
+Essa extensão é simplesmente essencial. Ela abre um servidor local e me permite visualizar as alterações do meu código HTML e CSS em tempo real, diretamente em uma aba lateral dentro do próprio VSCode ou em uma janela do navegador. Ela atualiza a página automaticamente conforme eu digito, poupando-me o tempo de ter que salvar o arquivo e ficar atualizando (F5) o navegador manualmente a cada pequena mudança de estilo ou texto.
+
+2. Prettier - Code Formatter:
+Escrever código limpo, alinhado e bem formatado pode dar trabalho. O Prettier resolve isso automatizando a formatação. Sempre que eu salvo o arquivo, ele reorganiza o espaçamento, indenta o código, corrige aspas e quebras de linha. Isso garante que meu HTML, CSS e JavaScript fiquem legíveis, consistentes e fáceis de dar manutenção sem que eu precise me preocupar com isso manualmente enquanto digito.
+
+3. Tailwind CSS IntelliSense:
+Como o Tailwind CSS utiliza centenas de classes utilitárias, é muito difícil decorar todas. Essa extensão é incrível porque fornece autocompletes inteligentes (sugestões) das classes conforme eu começo a digitar. Além disso, ela mostra uma prévia da cor (no caso de classes de cor) e o código CSS equivalente de cada classe utilitária ao passar o mouse por cima, evitando que eu precise consultar a documentação oficial a todo momento.
+
+4. Portuguese (Brazil) Language Pack (Tradutor Oficial):
+Como o VSCode vem em inglês por padrão, a instalação do pacote de tradução oficial da Microsoft facilita muito a navegação. Ele traduz toda a interface, menus de configurações, mensagens de erro e opções de terminal para o português. Isso melhora minha produtividade e torna o ambiente de desenvolvimento muito mais amigável e acessível.
+
+5. Autocomplete nativo e Emmet:
+Embora já venha embutido no VSCode, a configuração de autocomplete de tags HTML e propriedades CSS acelera drasticamente a escrita de código. Com o Emmet, por exemplo, eu posso digitar apenas "div.card>img+h3" e pressionar Tab para que o editor gere toda a estrutura HTML correspondente instantaneamente.
+
+Essas ferramentas transformam o VSCode de um editor de textos simples em uma verdadeira "estação de trabalho" automatizada, me ajudando a cometer menos erros de sintaxe e a focar mais na lógica e no design das minhas páginas.
