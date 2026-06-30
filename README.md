@@ -70,6 +70,14 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 
 ---
 
+### 🛡️ Trilha 5 — Letramento Digital como Ferramenta de Cidadania
+
+| # | Atividade | Arquivo | Demo |
+|---|-----------|---------|------|
+| 1 | Identidade Digital & Comportamento (Matuê) | [`Atividade 1/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%201/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%201/index.html) |
+
+---
+
 ## 🛠️ Tecnologias utilizadas
 
 ```
@@ -94,10 +102,13 @@ atividades-proz/
 ├── #7/  … #19/                         ← Trilha Web (HTML/CSS/JS)
 ├── #20/ … #24/                         ← Trilha SQL
 │
-└── Projeto de Vida com Ferramentas Digitais/
-    ├── Atividade 1/   (Mapa de Metas)
-    ├── Atividade 2/   (Plano de Ação)
-    └── Atividade 3/   (Marketing Pessoal)
+├── Projeto de Vida com Ferramentas Digitais/
+│   ├── Atividade 1/   (Mapa de Metas)
+│   ├── Atividade 2/   (Plano de Ação)
+│   └── Atividade 3/   (Marketing Pessoal)
+│
+└── Letramento Digital como Ferramenta de Cidadania e Produtividade/
+    └── Atividade 1/   (Identidade Digital - Matuê)
 ```
 
 ---
