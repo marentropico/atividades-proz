@@ -75,6 +75,7 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 | # | Atividade | Arquivo | Demo |
 |---|-----------|---------|------|
 | 1 | Identidade Digital & Comportamento (Matuê) | [`Atividade 1/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%201/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%201/index.html) |
+| 2 | Combate à Desinformação — Fato ou Fake | [`Atividade 2/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%202/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%202/index.html) |
 
 ---
 
@@ -108,7 +109,8 @@ atividades-proz/
 │   └── Atividade 3/   (Marketing Pessoal)
 │
 └── Letramento Digital como Ferramenta de Cidadania e Produtividade/
-    └── Atividade 1/   (Identidade Digital - Matuê)
+    ├── Atividade 1/   (Identidade Digital - Matuê)
+    └── Atividade 2/   (Desinformação - Madonna Copacabana)
 ```
 
 ---
