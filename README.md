@@ -9,7 +9,7 @@
 
 ## Sobre este repositório
 
-Repositório de todas as atividades desenvolvidas durante o curso da **Proz Educação** em 2026. O portfólio abrange quatro trilhas: Fundamentos de Python, Desenvolvimento Web (HTML/CSS/JS), Banco de Dados com SQL e Projeto de Vida com Ferramentas Digitais.
+Repositório de todas as atividades desenvolvidas durante o curso de Programação da **Liga STEAM** (oferecido pela **Proz Educação**, em parceria com a **ArcelorMittal** e **CBMM**) em 2026. O portfólio abrange quatro trilhas: Fundamentos de Python, Desenvolvimento Web (HTML/CSS/JS), Banco de Dados com SQL e Projeto de Vida com Ferramentas Digitais.
 
 ---
 
