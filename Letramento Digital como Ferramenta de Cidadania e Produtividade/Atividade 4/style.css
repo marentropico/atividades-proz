@@ -154,6 +154,15 @@ body {
     color: var(--color-accent);
 }
 
+.avatar-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid var(--bg-card);
+    object-fit: cover;
+    display: block;
+}
+
 .profile-meta {
     padding: 1.2rem 1.2rem 0;
 }
@@ -328,6 +337,14 @@ body {
     font-family: var(--f-title);
     font-weight: 700;
     font-size: 1rem;
+}
+
+.post-avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
 }
 
 .post-author {
