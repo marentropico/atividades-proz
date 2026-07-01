@@ -89,6 +89,7 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 |---|-----------|---------|------|
 | 1 | Combate ao Desperdício no Refeitório | [`Atividade 1/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%201/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%201/index.html) |
 | 2 | Modelagem Visual — Fluxo de Projeto | [`Atividade 2/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%202/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%202/index.html) |
+| 3 | LoopQuest — O Tabuleiro Binário | [`Atividade 3/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%203/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%203/index.html) |
 
 ---
 
@@ -131,7 +132,8 @@ atividades-proz/
 │
 └── Pensamento Computacional com Aplicação Imediata/
     ├── Atividade 1/   (Desperdício no Refeitório)
-    └── Atividade 2/   (Fluxo de Projeto)
+    ├── Atividade 2/   (Fluxo de Projeto)
+    └── Atividade 3/   (Jogo LoopQuest)
 ```
 
 ---

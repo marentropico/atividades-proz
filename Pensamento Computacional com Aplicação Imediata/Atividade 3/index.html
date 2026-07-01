@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoopQuest: O Jogo do Pensamento Computacional</title>
+    <meta name="description" content="Jogo de tabuleiro digital interativo aplicando variáveis (armazenamento de pontos) e laços de repetição (loops) no aprendizado de programação.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars-bg"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <p class="header-tag">Atividade 3 · Pensamento Computacional com Aplicação Imediata</p>
+        <h1 class="header-title">LoopQuest: <span>O Tabuleiro Binário</span></h1>
+        <p class="header-sub">Um jogo de tabuleiro interativo que ensina variáveis (armazenamento de pontos) e laços de repetição (repetição de ações) no navegador.</p>
+        <div class="author-badge">
+            <strong>Desenvolvido por:</strong> Marcos Paulo Figueroa (Marentropico)
+        </div>
+    </header>
+
+    <main class="game-container">
+        
+        <!-- PAINEL DE CONTROLE / INSTRUÇÕES (ESQUERDA) -->
+        <section class="control-panel">
+            
+            <!-- Regras & Mecânicas -->
+            <div class="panel-card instructions">
+                <h3>🎮 Regras do Jogo</h3>
+                <ul>
+                    <li><strong>Objetivo</strong>: Colete <strong>100 Bits</strong> antes que sua <strong>Energia</strong> caia a 0%.</li>
+                    <li><strong>Pontos (Variáveis)</strong>: Seu placar de Bits e Energia são variáveis atualizadas a cada casa.</li>
+                    <li><strong>Loop de Repetição</strong>: Dar uma volta completa no tabuleiro fecha um laço <code>for(volta = 1; volta <= N; volta++)</code>, rendendo <strong>+20 Bits</strong> de bônus!</li>
+                </ul>
+            </div>
+
+            <!-- Placar de Variáveis -->
+            <div class="panel-card scoreboard">
+                <h3>📊 Variáveis do Jogador</h3>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-label">Bits Coletados</span>
+                        <span class="stat-value" id="val-bits">0</span>
+                        <span class="stat-target">meta: 100</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Energia Restante</span>
+                        <span class="stat-value" id="val-energy">100%</span>
+                        <div class="energy-bar-bg">
+                            <div class="energy-bar" id="energy-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <span>Lap / Loop Atual:</span>
+                    <strong id="val-laps">0</strong>
+                </div>
+            </div>
+
+            <!-- Botão de Ação -->
+            <div class="panel-card action-box">
+                <div class="dice-container">
+                    <div class="dice" id="dice-element">?</div>
+                    <button class="btn-roll" id="btn-roll">Rolar Dado 🎲</button>
+                </div>
+                <div class="game-log" id="game-log">
+                    <p class="log-neutral">Clique no botão para rolar o dado e iniciar a jornada!</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- TABULEIRO CIRCULAR DO JOGO (DIREITA) -->
+        <section class="board-panel">
+            
+            <div class="board-wrapper">
+                
+                <!-- O Tabuleiro em formato de anel circular -->
+                <div class="board-circle">
+                    
+                    <!-- Centro do Tabuleiro -->
+                    <div class="board-center">
+                        <div class="center-brand">LoopQuest</div>
+                        <div class="center-status" id="center-status">Jogador na largada</div>
+                    </div>
+
+                    <!-- CASAS DO TABULEIRO (12 Casas) -->
+                    <!-- Casa 0: START -->
+                    <div class="board-tile tile-0 active" data-index="0">
+                        <span class="tile-icon">🏁</span>
+                        <span class="tile-label">START</span>
+                    </div>
+                    <!-- Casa 1: Bug de Código -->
+                    <div class="board-tile tile-1" data-index="1">
+                        <span class="tile-icon">👾</span>
+                        <span class="tile-label">BUG</span>
+                    </div>
+                    <!-- Casa 2: Bit Node -->
+                    <div class="board-tile tile-2" data-index="2">
+                        <span class="tile-icon">💎</span>
+                        <span class="tile-label">+10 BITS</span>
+                    </div>
+                    <!-- Casa 3: Loop Infinito -->
+                    <div class="board-tile tile-3" data-index="3">
+                        <span class="tile-icon">🔄</span>
+                        <span class="tile-label">LOOP</span>
+                    </div>
+                    <!-- Casa 4: Bateria -->
+                    <div class="board-tile tile-4" data-index="4">
+                        <span class="tile-icon">⚡</span>
+                        <span class="tile-label">+20 ENG</span>
+                    </div>
+                    <!-- Casa 5: Refatoração -->
+                    <div class="board-tile tile-5" data-index="5">
+                        <span class="tile-icon">🛠️</span>
+                        <span class="tile-label">+15 BITS</span>
+                    </div>
+                    <!-- Casa 6: Checkpoint -->
+                    <div class="board-tile tile-6" data-index="6">
+                        <span class="tile-icon">💾</span>
+                        <span class="tile-label">SAVE</span>
+                    </div>
+                    <!-- Casa 7: Pane no Sistema -->
+                    <div class="board-tile tile-7" data-index="7">
+                        <span class="tile-icon">🔥</span>
+                        <span class="tile-label">BUG</span>
+                    </div>
+                    <!-- Casa 8: Bit Node -->
+                    <div class="board-tile tile-8" data-index="8">
+                        <span class="tile-icon">💎</span>
+                        <span class="tile-label">+10 BITS</span>
+                    </div>
+                    <!-- Casa 9: Loop Condicional -->
+                    <div class="board-tile tile-9" data-index="9">
+                        <span class="tile-icon">🔄</span>
+                        <span class="tile-label">LOOP</span>
+                    </div>
+                    <!-- Casa 10: Supercarga -->
+                    <div class="board-tile tile-10" data-index="10">
+                        <span class="tile-icon">⚡</span>
+                        <span class="tile-label">+30 ENG</span>
+                    </div>
+                    <!-- Casa 11: Compilador -->
+                    <div class="board-tile tile-11" data-index="11">
+                        <span class="tile-icon">⚙️</span>
+                        <span class="tile-label">+25 BITS</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Overlay de Fim de Jogo (Vitória / Derrota) -->
+    <div class="game-overlay" id="game-overlay">
+        <div class="overlay-card">
+            <span class="overlay-icon" id="overlay-icon">🏆</span>
+            <h2 class="overlay-title" id="overlay-title">Você Venceu!</h2>
+            <p class="overlay-text" id="overlay-text">Conseguiu alcançar a meta de bits coletados.</p>
+            <button class="btn-reset" id="btn-reset">Jogar Novamente 🔄</button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2026 Marcos Paulo Figueroa · Marentropico</p>
+        <p>Trilha: Pensamento Computacional com Aplicação Implícita e Imediata · Atividade 3</p>
+        <p><a href="../../index.html">← Voltar ao Portal de Atividades</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
