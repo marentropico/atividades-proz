@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental: Clube da Luta — Letramento Digital</title>
+    <meta name="description" content="Mapa mental interativo analisando a comunicação (passiva, agressiva e assertiva) dos personagens de Clube da Luta.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Grotesk:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="glow-bg"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <p class="header-tag">Atividade 5 · Letramento Digital como Ferramenta de Cidadania</p>
+        <h1 class="header-title">Mapa Mental: <span>Clube da Luta</span></h1>
+        <p class="header-sub">Análise dos padrões de comunicação interpessoal (passiva, agressiva e assertiva) no clássico cinematográfico de David Fincher.</p>
+        
+        <div class="group-badge">
+            <strong>Integrante:</strong>
+            <span>Marcos Paulo Figueroa (Marentropico)</span>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <!-- MAPA MENTAL INTERATIVO -->
+        <section class="mindmap-section">
+            <h2 class="section-title">Mapa Mental Interativo</h2>
+            <p class="section-intro">Clique nos nós periféricos para ler os detalhes da análise de cada ramificação do mapa.</p>
+
+            <div class="mindmap-wrapper">
+                <div class="mindmap-container">
+                    
+                    <!-- Centro -->
+                    <div class="node node-center">
+                        <span class="center-title">Clube da Luta</span>
+                        <span class="center-sub">Comunicação</span>
+                    </div>
+
+                    <!-- Linhas Conectoras (SVG para visualização desktop) -->
+                    <svg class="map-lines" viewBox="0 0 800 500">
+                        <line x1="400" y1="250" x2="150" y2="120" stroke="rgba(255, 0, 127, 0.25)" stroke-width="2" />
+                        <line x1="400" y1="250" x2="650" y2="120" stroke="rgba(0, 212, 255, 0.25)" stroke-width="2" />
+                        <line x1="400" y1="250" x2="150" y2="380" stroke="rgba(0, 255, 102, 0.25)" stroke-width="2" />
+                        <line x1="400" y1="250" x2="650" y2="380" stroke="rgba(255, 215, 0, 0.25)" stroke-width="2" />
+                    </svg>
+
+                    <!-- Nós Periféricos -->
+                    <!-- Nó 1: Estilos de Comunicação -->
+                    <div class="node node-branch branch-pink" id="node-estilos">
+                        <span class="node-icon">🎭</span>
+                        <h3>Estilos de Comunicação</h3>
+                    </div>
+
+                    <!-- Nó 2: Exemplos Práticos -->
+                    <div class="node node-branch branch-cyan" id="node-exemplos">
+                        <span class="node-icon">🎬</span>
+                        <h3>Exemplos no Filme</h3>
+                    </div>
+
+                    <!-- Nó 3: Reflexão Pessoal -->
+                    <div class="node node-branch branch-green" id="node-reflexao">
+                        <span class="node-icon">🧠</span>
+                        <h3>Reflexão & Vida Real</h3>
+                    </div>
+
+                    <!-- Nó 4: Resolução Conflitos -->
+                    <div class="node node-branch branch-gold" id="node-resolucao">
+                        <span class="node-icon">⚖️</span>
+                        <h3>Assertividade no Cotidiano</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Detalhes do Nó Selecionado -->
+            <div class="detail-panel" id="detail-panel">
+                <div class="panel-placeholder">
+                    <p>👈 Clique em qualquer um dos nós do mapa acima para ler a análise completa.</p>
+                </div>
+                <div class="panel-content hidden" id="panel-content">
+                    <span class="panel-badge" id="panel-badge">Categoria</span>
+                    <h3 class="panel-title" id="panel-title">Título do Nó</h3>
+                    <div class="panel-body" id="panel-body">
+                        Conteúdo detalhado.
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2026 Marcos Paulo Figueroa · Marentropico</p>
+        <p>Trilha: Letramento Digital como Ferramenta de Cidadania e Produtividade · Atividade 5</p>
+        <p><a href="../../index.html">← Voltar ao Portal de Atividades</a></p>
+    </footer>
+
+    <!-- Dados do Mapa Mental (para o JS ler dinamicamente) -->
+    <script>
+        const mapData = {
+            "node-estilos": {
+                badge: "01 · Análise Psicológica",
+                title: "Estilos de Comunicação: Narrador vs. Tyler",
+                content: `
+                    <p>O filme apresenta uma divisão psicológica clara expressa em dois padrões de comunicação extremos:</p>
+                    <ul>
+                        <li><strong>O Narrador (Passividade extrema)</strong>: Representa o silêncio conformista. Ele aceita as imposições do sistema, consome de forma vazia e não consegue expressar sua frustração ou seus limites diretamente a ninguém.</li>
+                        <li><strong>Tyler Durden (Agressividade e Falsa Assertividade)</strong>: É o alter-ego carismático, disruptivo e destrutivo. Ele fala de forma assertiva e magnética sobre o consumo, mas sua ação e direcionamento de grupo são puramente agressivos, incitando o caos físico e o vandalismo para expressar sua insatisfação.</li>
+                    </ul>
+                `
+            },
+            "node-exemplos": {
+                badge: "02 · Cenas Marcantes",
+                title: "Exemplos de Comunicação no Filme",
+                content: `
+                    <p>O comportamento dos personagens se manifesta em momentos-chave:</p>
+                    <ul>
+                        <li><strong>Conflito com o Chefe</strong>: O Narrador inicia as conversas de forma passiva, concordando com exigências abusivas. Mais tarde, ele transita bruscamente para uma agressividade manipuladora quando se auto-agride na sala do chefe para conseguir demissão voluntária paga.</li>
+                        <li><strong>Discursos de Tyler</strong>: Tyler utiliza uma oratória extremamente persuasiva e assertiva ("Você não é o seu trabalho"). No entanto, ele logo manipula seus seguidores com autoritarismo (regras rígidas como "a primeira regra é não falar sobre o clube") e comunicação agressiva de grupo.</li>
+                    </ul>
+                `
+            },
+            "node-reflexao": {
+                badge: "03 · Análise Prática",
+                title: "Reflexão Pessoal & Conexões Reais",
+                content: `
+                    <p>Minha análise me levou a comparar os extremos do filme com o cotidiano:</p>
+                    <p><strong>A panela de pressão da passividade</strong>: Na vida real e no trabalho, muitas vezes adotamos a postura passiva do Narrador, "engolindo sapos" e silenciando nossos limites por medo de confrontos. O problema é que acumular essa passividade gera estresse crônico que, eventualmente, explode de forma agressiva (simbolizado pelo nascimento destrutivo de Tyler Durden em nossas vidas).</p>
+                    <p>A violência física e a agressividade cega de Tyler não resolvem a insatisfação original; apenas substituem uma prisão de consumo por uma prisão de caos.</p>
+                `
+            },
+            "node-resolucao": {
+                badge: "04 · Resolução de Conflitos",
+                title: "Assertividade como o Caminho Saudável",
+                content: `
+                    <p>Como aplicar o aprendizado no dia a dia da comunicação interpessoal?</p>
+                    <ul>
+                        <li><strong>Dizer 'Não' a tempo</strong>: Expressar nossos limites de forma calma e assertiva antes de atingir o limite emocional.</li>
+                        <li><strong>Falar em primeira pessoa</strong>: Em vez de culpar os outros de forma agressiva ("Você fez isso errado"), expressar como nos sentimos ("Eu me sinto sobrecarregado quando isso acontece").</li>
+                        <li><strong>Separar a crítica do profissional</strong>: Aprender a receber feedbacks sem a passividade humilhante ou a agressividade defensiva.</li>
+                    </ul>
+                `
+            }
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
