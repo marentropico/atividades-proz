@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Ruído na Comunicação Digital</title>
+    <meta name="description" content="Estudo de caso sobre mal-entendidos causados pelo tom de voz em mensagens de texto.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header class="header">
+        <div class="header-content">
+            <p class="header-tag">Atividade 1 · Comunicação Digital e Empreendedorismo</p>
+            <h1 class="header-title">O Peso de uma Vírgula: <span>Estudo de Caso</span></h1>
+            <p class="header-sub">Analisando como a pressa, a falta de contexto e a pontuação alteram o tom de voz e geram ruídos na comunicação profissional.</p>
+        </div>
+    </header>
+
+    <main class="main-layout">
+        
+        <!-- COLUNA ESQUERDA: O Chat Original (O Problema) -->
+        <section class="chat-column">
+            <h2 class="section-title">O Incidente Original</h2>
+            
+            <div class="phone-mockup">
+                <div class="phone-header">
+                    <div class="contact-info">
+                        <div class="avatar">C</div>
+                        <div class="details">
+                            <strong>Cliente (Lançamento)</strong>
+                            <span>Visto por último sexta às 18:03</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-body">
+                    <div class="date-badge">Sexta-feira</div>
+                    
+                    <div class="message received">
+                        <p>Oi, tudo bem? Como está o andamento daquele vídeo pro lançamento de segunda-feira? Podemos revisar hoje?</p>
+                        <span class="time">17:45</span>
+                    </div>
+                    
+                    <div class="message sent problem-msg">
+                        <p>Não vai dar hoje. Deu problema no arquivo. Segunda eu entrego, não precisa se preocupar</p>
+                        <span class="time">17:58 <span class="read-ticks">✓✓</span></span>
+                    </div>
+
+                    <div class="message received panic-msg">
+                        <p>Como assim deu problema?! A campanha sobe segunda 8h da manhã! Se não tiver o vídeo o lançamento inteiro vai atrasar! Me liga urgente!!!</p>
+                        <span class="time">18:02</span>
+                    </div>
+                </div>
+                
+                <div class="phone-footer">
+                    <div class="input-bar">Mensagem...</div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- COLUNA DIREITA: Análise e Refação -->
+        <section class="analysis-column">
+            
+            <!-- Parte 1: O Contexto -->
+            <div class="analysis-card">
+                <div class="card-icon">📖</div>
+                <h3>1. O Contexto do Ocorrido</h3>
+                <p><strong>Cenário:</strong> Uma troca de mensagens via WhatsApp entre um editor de vídeo freelancer e o cliente no final do expediente de sexta-feira. O cliente precisava do vídeo finalizado para um lançamento importante na segunda-feira pela manhã.</p>
+                <p><strong>O que aconteceu de fato:</strong> O editor teve um pequeno erro de cache na exportação do vídeo que levaria cerca de 30 minutos para corrigir, mas ele já estava saindo para um compromisso inadiável. Como o prazo oficial de entrega era segunda-feira, ele tentou avisar rapidamente pelo celular enquanto dirigia que enviaria o arquivo corrigido na segunda, sem intenção de atrasar o lançamento da campanha.</p>
+            </div>
+
+            <!-- Parte 2: Análise Crítica -->
+            <div class="analysis-card">
+                <div class="card-icon">🔍</div>
+                <h3>2. Por que o efeito foi negativo?</h3>
+                <ul class="analysis-list">
+                    <li><strong>Tom seco e agressivo:</strong> A ausência de saudação e o uso de frases curtas e diretas ("Não vai dar hoje. Deu problema no arquivo.") soaram grosseiras e alarmistas. O cliente interpretou como descaso.</li>
+                    <li><strong>Falta de contexto:</strong> Dizer apenas "deu problema" sem explicar a gravidade fez o cliente imaginar o pior cenário (perda total do arquivo).</li>
+                    <li><strong>Comando autoritário:</strong> A frase "não precisa se preocupar" sem pontuação final, vindo após uma notícia ruim, soou irônica e paternalista, gerando ansiedade em vez de acalmar.</li>
+                </ul>
+            </div>
+
+            <!-- Parte 3: A Reescrutura -->
+            <div class="analysis-card highlight-card">
+                <div class="card-icon">✨</div>
+                <h3>3. Como deveria ter sido (A Solução)</h3>
+                <p>Se o editor aplicasse os princípios de comunicação não-violenta e empatia digital, a mensagem ideal mitigaria a ansiedade e manteria o profissionalismo:</p>
+                
+                <div class="better-message">
+                    <div class="message sent revised-msg">
+                        <p>Oi! Tudo bem? Tivemos um errinho leve na exportação aqui no final do dia, mas o projeto está a salvo. Como preciso sair agora, vou deixar renderizando no fim de semana e na segunda, às 7h da manhã, o link estará na sua caixa de entrada, pronto para a campanha das 8h. Fica tranquilo, o cronograma está garantido! Bom fim de semana! 🙏</p>
+                        <span class="time">17:58</span>
+                    </div>
+                </div>
+
+                <div class="reflection">
+                    <h4>Reflexão:</h4>
+                    <p>Essa nova versão resolve o problema estrutural. Ela <strong>antecipa o impacto</strong> (garante que as 8h estará pronto), <strong>explica a falha sem alarmismo</strong> ("errinho leve") e <strong>usa emojis e pontuação adequados</strong> para suavizar o tom de voz. O cliente não sentiria necessidade de ligar desesperado às 18h de sexta-feira.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2026 Marcos Paulo Figueroa · Marentropico</p>
+        <p>Trilha: Comunicação Digital e Empreendedorismo · Atividade 1</p>
+        <p><a href="../../index.html">← Voltar ao Portal de Atividades</a></p>
+    </footer>
+
+</body>
+</html>

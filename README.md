@@ -96,6 +96,14 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 
 ---
 
+### 💬 Trilha 7 — Comunicação Digital e Empreendedorismo
+
+| # | Atividade | Arquivo | Demo |
+|---|-----------|---------|------|
+| 1 | O Peso de uma Vírgula | [`Atividade 1/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%201/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%201/index.html) |
+
+---
+
 ## 🛠️ Tecnologias utilizadas
 
 ```
@@ -140,6 +148,9 @@ atividades-proz/
     ├── Atividade 4/   (Priorização Diária)
     ├── Atividade 5/   (Automações AutoFlow)
     └── Atividade 6/   (Pitch EcoPonto Digital)
+    
+└── Comunicação Digital e Empreendedorismo/
+    └── Atividade 1/   (O Peso de uma Vírgula)
 ```
 
 ---

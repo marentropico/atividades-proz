@@ -1,0 +1,343 @@
+/* =============================================
+   Comunicação Digital - Estudo de Caso
+   CSS Stylesheet
+   ============================================= */
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #f5f7fa;
+    --text-main: #2c3e50;
+    --text-muted: #7f8c8d;
+    --border: #e2e8f0;
+    
+    --c-primary: #3b82f6; /* Blue */
+    --c-success: #10b981; /* Green */
+    --c-danger: #ef4444; /* Red */
+    --c-whatsapp-bg: #ece5dd;
+    --c-whatsapp-sent: #dcf8c6;
+    --c-whatsapp-received: #ffffff;
+    
+    --f-main: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--f-main);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--c-primary);
+    margin-bottom: 0.8rem;
+}
+
+.header-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.header-title span {
+    color: var(--c-primary);
+}
+
+.header-sub {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* ================= MAIN LAYOUT ================= */
+.main-layout {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* ================= CHAT SIMULATOR (LEFT) ================= */
+.chat-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.phone-mockup {
+    background: var(--c-whatsapp-bg);
+    border-radius: 24px;
+    border: 8px solid #cbd5e1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.phone-header {
+    background: #075e54;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.details strong {
+    display: block;
+    font-size: 0.95rem;
+}
+
+.details span {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    overflow-y: auto;
+}
+
+.date-badge {
+    align-self: center;
+    background: rgba(225,245,254, 0.8);
+    color: #546e7a;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.message {
+    max-width: 85%;
+    padding: 0.6rem 0.8rem 1.2rem;
+    border-radius: 8px;
+    position: relative;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #111;
+}
+
+.message .time {
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
+    font-size: 0.65rem;
+    color: #888;
+}
+
+.message.received {
+    background: var(--c-whatsapp-received);
+    align-self: flex-start;
+    border-top-left-radius: 0;
+}
+
+.message.sent {
+    background: var(--c-whatsapp-sent);
+    align-self: flex-end;
+    border-top-right-radius: 0;
+}
+
+.read-ticks {
+    color: #34b7f1;
+    margin-left: 2px;
+}
+
+.problem-msg {
+    border: 2px solid var(--c-danger);
+    background: #fee2e2 !important;
+}
+
+.panic-msg {
+    background: #fff;
+    font-weight: 600;
+}
+
+.phone-footer {
+    background: #f0f0f0;
+    padding: 0.8rem;
+}
+
+.input-bar {
+    background: #fff;
+    border-radius: 20px;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* ================= ANALYSIS (RIGHT) ================= */
+.analysis-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.analysis-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.analysis-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.analysis-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.analysis-card p strong {
+    color: var(--text-main);
+}
+
+.analysis-list {
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.analysis-list li {
+    margin-bottom: 0.8rem;
+}
+
+.analysis-list strong {
+    color: var(--c-danger);
+}
+
+/* Highlight / Rewritten Section */
+.highlight-card {
+    border: 2px solid var(--c-success);
+    background: #f0fdf4;
+}
+
+.highlight-card h3 {
+    color: #065f46;
+}
+
+.better-message {
+    background: var(--c-whatsapp-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.revised-msg {
+    align-self: center;
+    background: var(--c-whatsapp-sent);
+    border: 2px solid var(--c-success);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.reflection h4 {
+    font-size: 1rem;
+    color: #065f46;
+    margin-bottom: 0.5rem;
+}
+
+.reflection p {
+    margin-bottom: 0;
+    color: #064e3b;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.footer a {
+    color: var(--c-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .phone-mockup {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
