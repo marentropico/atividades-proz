@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamento Computacional: Combate ao Desperdício</title>
+    <meta name="description" content="Aplicação dos 4 pilares do Pensamento Computacional para resolução do problema de desperdício de alimentos no refeitório acadêmico.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="glow-bg"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <p class="header-tag">Atividade 1 · Pensamento Computacional com Aplicação Imediata</p>
+        <h1 class="header-title">Resolução de Problemas: <span>Refeitório Eficiente</span></h1>
+        <p class="header-sub">Aplicando Decomposição, Padrões, Abstração e Algoritmos para reduzir o desperdício de alimentos no refeitório institucional.</p>
+        <div class="author-badge">
+            <strong>Responsável:</strong> Marcos Paulo Figueroa (Marentropico)
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <!-- GRID DOS 4 PILARES -->
+        <section class="pillars-section">
+            <h2 class="section-title">Os 4 Pilares da Solução</h2>
+            <p class="section-intro">Clique em cada um dos cards abaixo para abrir a análise e a modelagem estruturada do problema.</p>
+
+            <div class="pillars-grid">
+                
+                <!-- Pilar 1: Decomposição -->
+                <div class="pillar-card active" data-pillar="decomposicao" style="--ac: #2ecc71;">
+                    <span class="card-num">01</span>
+                    <h3>Decomposição</h3>
+                    <p class="card-summary">Quebrando o desperdício em partes menores e identificando os agentes envolvidos.</p>
+                </div>
+
+                <!-- Pilar 2: Padrões -->
+                <div class="pillar-card" data-pillar="padroes" style="--ac: #3498db;">
+                    <span class="card-num">02</span>
+                    <h3>Reconhecimento de Padrões</h3>
+                    <p class="card-summary">Mapeando comportamentos repetitivos e fatores comuns que geram o descarte.</p>
+                </div>
+
+                <!-- Pilar 3: Abstração -->
+                <div class="pillar-card" data-pillar="abstracao" style="--ac: #9b59b6;">
+                    <span class="card-num">03</span>
+                    <h3>Abstração</h3>
+                    <p class="card-summary">Filtrando o que é crucial resolver agora e o que pode ser deixado para depois.</p>
+                </div>
+
+                <!-- Pilar 4: Algoritmos -->
+                <div class="pillar-card" data-pillar="algoritmos" style="--ac: #e67e22;">
+                    <span class="card-num">04</span>
+                    <h3>Algoritmos</h3>
+                    <p class="card-summary">Passos lógicos estruturados e metas realistas para a implementação da solução.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PAINEL DE DETALHES DINÂMICO -->
+        <section class="details-panel" id="details-panel">
+            <div class="panel-content" id="panel-content">
+                <span class="panel-badge" id="panel-badge">Pilar 01</span>
+                <h3 class="panel-title" id="panel-title">Carregando pilar...</h3>
+                <div class="panel-body" id="panel-body">
+                    <!-- O JS preenche aqui -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2026 Marcos Paulo Figueroa · Marentropico</p>
+        <p>Trilha: Pensamento Computacional com Aplicação Implícita e Imediata · Atividade 1</p>
+        <p><a href="../../index.html">← Voltar ao Portal de Atividades</a></p>
+    </footer>
+
+    <!-- Dados dos Pilares -->
+    <script>
+        const pillarData = {
+            "decomposicao": {
+                badge: "Pilar 01 · Decomposição",
+                title: "Desmembrando o Desperdício",
+                content: `
+                    <p>Para resolver o desperdício, precisamos quebrar o problema geral em suas partes constituintes:</p>
+                    <div class="flow-step-box">
+                        <div class="flow-step">
+                            <strong>1. Onde e quando ocorre?</strong>
+                            <p>No refeitório acadêmico, majoritariamente durante os intervalos de almoço e janta (horários de pico).</p>
+                        </div>
+                        <div class="arrow-down">↓</div>
+                        <div class="flow-step">
+                            <strong>2. Quais alimentos são descartados?</strong>
+                            <p>a) Restos de refeições prontas deixadas nos pratos (arroz, feijão, proteína).<br>b) Sobras de lanches industrializados/embalados (sucos, bolachas, frutas não consumidas) jogados fora fechados.</p>
+                        </div>
+                        <div class="arrow-down">↓</div>
+                        <div class="flow-step">
+                            <strong>3. Quem está envolvido no ecossistema?</strong>
+                            <p><strong>Estudantes/Servidores</strong> (usuários finais), <strong>Equipe da Cozinha</strong> (planejamento de porções) e <strong>Fornecedores</strong> (tamanho padrão de embalagens).</p>
+                        </div>
+                    </div>
+                `
+            },
+            "padroes": {
+                badge: "Pilar 02 · Reconhecimento de Padrões",
+                title: "Mapeando Padrões e Fatores de Causa",
+                content: `
+                    <p>Identificamos comportamentos recorrentes e situações que geram maior volume de descarte:</p>
+                    <ul>
+                        <li><strong>O Efeito "Olho Maior que a Barriga"</strong>: Estudantes servem porções excessivas nos dias em que o cardápio é muito popular, gerando mais sobras no prato.</li>
+                        <li><strong>Embalagens Inflexíveis</strong>: A cozinha distribui kits fechados com frutas, sucos e biscoitos. Quem não gosta de um item específico (ex: banana madura demais ou suco de sabor impopular) joga a embalagem inteira no lixo sem abrir.</li>
+                        <li><strong>Pressa e Filas</strong>: A pressa de comer no intervalo reduzido faz com que as pessoas abandonem pratos pela metade quando o tempo acaba.</li>
+                    </ul>
+                `
+            },
+            "abstracao": {
+                badge: "Pilar 03 · Abstração",
+                title: "Filtrando Foco e Relevância (Priorização)",
+                content: `
+                    <p>Separamos o que é crucial resolver imediatamente daquilo que está fora de alcance:</p>
+                    <div class="priority-grid">
+                        <div class="priority-box priority-high">
+                            <h4>🟢 Foco Imediato (Crucial)</h4>
+                            <p><strong>Ajuste de Porções</strong>: Flexibilizar a quantidade de comida no prato (servir menos para quem tem menos fome).<br><strong>Separação de Sobras Fechadas</strong>: Evitar que lanches fechados entrem na lixeira comum.</p>
+                        </div>
+                        <div class="priority-box priority-low">
+                            <h4>🔴 Deixar para Depois (Secundário)</h4>
+                            <p><strong>Mudança de fornecedores de embalagens</strong> (processo burocrático e lento).<br><strong>Reforma física do refeitório</strong> para otimização de filas (alto custo financeiro).</p>
+                        </div>
+                    </div>
+                `
+            },
+            "algoritmos": {
+                badge: "Pilar 04 · Algoritmos",
+                title: "Algoritmo de Execução da Solução",
+                content: `
+                    <p>Sequência passo a passo realista e executável para reduzir o desperdício em até 30 dias:</p>
+                    <ol class="algorithm-list">
+                        <li>
+                            <strong>Passo 1: Implementar o Prato Ajustado</strong>
+                            <p>Instruir os atendentes da cozinha a oferecerem porção "Média" ou "Grande" sob demanda, em vez de servir porções fixadas superdimensionadas.</p>
+                        </li>
+                        <li>
+                            <strong>Passo 2: Criar a "Caixa de Partilha" (Compartilhamento)</strong>
+                            <p>Posicionar uma mesa/caixa limpa antes da lixeira. Estudantes que receberam itens de kit fechados que não desejam consumir (ex: maçãs, bolachas lacradas) os depositam ali para que outros interessados possam pegá-los de graça.</p>
+                        </li>
+                        <li>
+                            <strong>Passo 3: Comunicação Visual Objetiva</strong>
+                            <p>Fixar cartazes com o algoritmo do descarte acima da lixeira: <em>"Sobrou? Comida aberta vai na lixeira orgânica. Lanche fechado? Deixe na Caixa de Partilha."</em></p>
+                        </li>
+                        <li>
+                            <strong>Passo 4: Monitoramento Semanal</strong>
+                            <p>Pesagem do lixo orgânico na sexta-feira para computar a redução do desperdício e celebrar os resultados com a comunidade estudantil.</p>
+                        </li>
+                    </ol>
+                `
+            }
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

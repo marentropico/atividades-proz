@@ -83,6 +83,14 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 
 ---
 
+### ⚙️ Trilha 6 — Pensamento Computacional com Aplicação Imediata
+
+| # | Atividade | Arquivo | Demo |
+|---|-----------|---------|------|
+| 1 | Combate ao Desperdício no Refeitório | [`Atividade 1/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%201/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%201/index.html) |
+
+---
+
 ## 🛠️ Tecnologias utilizadas
 
 ```
@@ -112,13 +120,16 @@ atividades-proz/
 │   ├── Atividade 2/   (Plano de Ação)
 │   └── Atividade 3/   (Marketing Pessoal)
 │
-└── Letramento Digital como Ferramenta de Cidadania e Produtividade/
-    ├── Atividade 1/   (Identidade Digital - Matuê)
-    ├── Atividade 2/   (Desinformação - Madonna Copacabana)
-    ├── Atividade 3/   (Cibersegurança - Estudo de Caso)
-    ├── Atividade 4/   (Perfil Profissional Digital)
-    ├── Atividade 5/   (Comunicação - Clube da Luta)
-    └── Atividade 6/   (Diário Offline - Desconexão)
+├── Letramento Digital como Ferramenta de Cidadania e Produtividade/
+│   ├── Atividade 1/   (Identidade Digital - Matuê)
+│   ├── Atividade 2/   (Desinformação - Madonna Copacabana)
+│   ├── Atividade 3/   (Cibersegurança - Estudo de Caso)
+│   ├── Atividade 4/   (Perfil Profissional Digital)
+│   ├── Atividade 5/   (Comunicação - Clube da Luta)
+│   └── Atividade 6/   (Diário Offline - Desconexão)
+│
+└── Pensamento Computacional com Aplicação Imediata/
+    └── Atividade 1/   (Desperdício no Refeitório)
 ```
 
 ---
