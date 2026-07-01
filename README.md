@@ -102,6 +102,7 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 |---|-----------|---------|------|
 | 1 | O Peso de uma Vírgula | [`Atividade 1/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%201/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%201/index.html) |
 | 2 | Anúncio Magnético — Nocturna Café | [`Atividade 2/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%202/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%202/index.html) |
+| 3 | Canvas de Projeto — Umimbae Hub | [`Atividade 3/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%203/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%203/index.html) |
 
 ---
 
@@ -152,7 +153,8 @@ atividades-proz/
     
 └── Comunicação Digital e Empreendedorismo/
     ├── Atividade 1/   (O Peso de uma Vírgula)
-    └── Atividade 2/   (Anúncio Nocturna Café)
+    ├── Atividade 2/   (Anúncio Nocturna Café)
+    └── Atividade 3/   (Canvas Umimbae Hub)
 ```
 
 ---

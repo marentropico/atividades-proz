@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas de Projeto: Plataforma Umimbae</title>
+    <meta name="description" content="Mapeamento visual do escopo, planejamento e execução do Hub Digital Umimbae.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <p class="tag">Atividade 3 · Comunicação Digital e Empreendedorismo</p>
+        <h1>Canvas de Projeto: <span>Plataforma Umimbae</span></h1>
+        <p>Mapeamento visual das etapas de construção do nosso Hub Educacional e Produtora (umimbae.com.br).</p>
+    </header>
+
+    <main class="canvas-container">
+
+        <!-- LINHA 1: DEFINIÇÃO DE BASE -->
+        <div class="canvas-row">
+            
+            <section class="canvas-block block-scope">
+                <div class="block-header">
+                    <h2>🎯 1. Escopo do Projeto</h2>
+                </div>
+                <div class="block-body">
+                    <div class="note positive">
+                        <strong>O que vamos fazer:</strong>
+                        <p>Criar uma plataforma centralizada (Hub) que integra Cursos (Academy), Portfólio Audiovisual e Ferramentas Tech exclusivas (DAW, Planner).</p>
+                    </div>
+                    <div class="note negative">
+                        <strong>O que NÃO vamos fazer:</strong>
+                        <p>Não seremos uma rede social aberta e não venderemos hardware físico. O foco é software, educação e serviços digitais.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="canvas-block block-audience">
+                <div class="block-header">
+                    <h2>👥 2. Público-Alvo</h2>
+                </div>
+                <div class="block-body">
+                    <ul>
+                        <li><strong>Artistas Independentes:</strong> Precisam de clipes, produção musical e distribuição.</li>
+                        <li><strong>Estudantes e Autodidatas:</strong> Buscam cursos acessíveis de tecnologia e audiovisual (Academy).</li>
+                        <li><strong>Empreendedores:</strong> Precisam de branding e soluções web para seus negócios.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="canvas-block block-risks">
+                <div class="block-header">
+                    <h2>⚠️ 3. Riscos e Ameaças</h2>
+                </div>
+                <div class="block-body">
+                    <div class="risk-item">
+                        <span class="risk-title">Baixa adesão inicial na Academy</span>
+                        <span class="risk-action"><strong>Plano de Ação:</strong> Oferecer módulos gratuitos introdutórios para captação de leads.</span>
+                    </div>
+                    <div class="risk-item">
+                        <span class="risk-title">Sobrecarga de Servidor (Ferramentas Web)</span>
+                        <span class="risk-action"><strong>Plano de Ação:</strong> Hospedagem escalável na AWS e otimização de cache no front-end.</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- LINHA 2: FLUXO DE TEMPO (TIMELINE) -->
+        <div class="canvas-timeline">
+            <h2 class="timeline-title">Estrutura de Fases (Roadmap)</h2>
+            <div class="timeline-track">
+                
+                <!-- Fase 1: Planejamento -->
+                <div class="phase-card">
+                    <div class="phase-icon">📝</div>
+                    <h3>Fase 1: Planejamento</h3>
+                    <p class="phase-desc">Mapeamento de viabilidade e arquitetura.</p>
+                    <ul class="task-list">
+                        <li>Levantamento de requisitos do servidor.</li>
+                        <li>Design do Figma (UI/UX).</li>
+                        <li>Definição do modelo de banco de dados (MySQL).</li>
+                    </ul>
+                    <div class="phase-meta"><strong>Responsáveis:</strong> UX Designer, Tech Lead</div>
+                </div>
+
+                <div class="connector">→</div>
+
+                <!-- Fase 2: Execução -->
+                <div class="phase-card highlight-phase">
+                    <div class="phase-icon">⚙️</div>
+                    <h3>Fase 2: Execução (Dev)</h3>
+                    <p class="phase-desc">Onde a mágica (e o código) acontece.</p>
+                    <ul class="task-list">
+                        <li>Desenvolvimento Front-end (HTML/CSS/JS).</li>
+                        <li>Backend e Autenticação (PHP/APIs).</li>
+                        <li>Upload e compressão de vídeos da Academy.</li>
+                        <li><em>Testes:</em> QA de responsividade e segurança.</li>
+                    </ul>
+                    <div class="phase-meta"><strong>Responsáveis:</strong> Desenvolvedores Full-Stack</div>
+                </div>
+
+                <div class="connector">→</div>
+
+                <!-- Fase 3: Monitoramento -->
+                <div class="phase-card">
+                    <div class="phase-icon">🚀</div>
+                    <h3>Fase 3: Lançamento & Monitoramento</h3>
+                    <p class="phase-desc">Go-live e coleta de feedback.</p>
+                    <ul class="task-list">
+                        <li>Campanha de lançamento nas redes sociais.</li>
+                        <li>Monitoramento via Google Analytics e Hotjar.</li>
+                        <li>Registro de bugs reportados por usuários.</li>
+                        <li><strong>Sucesso =</strong> 500 usuários ativos na semana 1.</li>
+                    </ul>
+                    <div class="phase-meta"><strong>Responsáveis:</strong> Marketing, Suporte</div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Marcos Paulo Figueroa · Marentropico</p>
+        <p>Trilha: Comunicação Digital e Empreendedorismo · Atividade 3</p>
+        <p><a href="../../index.html">← Voltar ao Portal de Atividades</a></p>
+    </footer>
+
+</body>
+</html>
