@@ -79,6 +79,7 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 | 3 | Cibersegurança — Relato & Prevenção | [`Atividade 3/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%203/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%203/index.html) |
 | 4 | Perfil Profissional Digital | [`Atividade 4/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%204/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%204/index.html) |
 | 5 | Comunicação e Conflito (Clube da Luta) | [`Atividade 5/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%205/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%205/index.html) |
+| 6 | Diário Offline — Desconexão | [`Atividade 6/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%206/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%206/index.html) |
 
 ---
 
@@ -116,7 +117,8 @@ atividades-proz/
     ├── Atividade 2/   (Desinformação - Madonna Copacabana)
     ├── Atividade 3/   (Cibersegurança - Estudo de Caso)
     ├── Atividade 4/   (Perfil Profissional Digital)
-    └── Atividade 5/   (Comunicação - Clube da Luta)
+    ├── Atividade 5/   (Comunicação - Clube da Luta)
+    └── Atividade 6/   (Diário Offline - Desconexão)
 ```
 
 ---
