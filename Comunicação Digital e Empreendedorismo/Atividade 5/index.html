@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitch: EcoVoz — Natureza Preta</title>
+    <meta name="description" content="Pitch completo do projeto EcoVoz: plataforma de cartografia participativa para justiça ambiental.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- SLIDE CONTROLS -->
+    <div class="controls">
+        <button id="btnPrev" onclick="changeSlide(-1)" title="Slide anterior">←</button>
+        <span id="slideCounter">1 / 7</span>
+        <button id="btnNext" onclick="changeSlide(1)" title="Próximo slide">→</button>
+    </div>
+
+    <!-- SLIDE CONTAINER -->
+    <div class="slides-wrapper" id="slidesWrapper">
+
+        <!-- SLIDE 1: CAPA -->
+        <div class="slide slide-cover active" data-index="0">
+            <div class="cover-bg"></div>
+            <div class="cover-content">
+                <div class="cover-tag">Pitch · Comunicação Digital e Empreendedorismo</div>
+                <div class="logo-block">
+                    <span class="logo-icon">🌿</span>
+                    <h1>EcoVoz</h1>
+                    <span class="logo-sub">Natureza Preta</span>
+                </div>
+                <p class="cover-tagline">"A voz da comunidade vira dado.<br>O dado vira ação. A ação vira legado."</p>
+                <div class="cover-meta">
+                    <span>Marcos Paulo Figueroa</span>
+                    <span class="dot">·</span>
+                    <span>Projeto Integrador — PROZ</span>
+                    <span class="dot">·</span>
+                    <span>2026</span>
+                </div>
+                <div class="cover-hint">Pressione → para avançar</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: O PROBLEMA -->
+        <div class="slide slide-problem" data-index="1">
+            <div class="slide-header">
+                <span class="slide-num">01</span>
+                <span class="slide-label">O Problema</span>
+            </div>
+            <div class="slide-body">
+                <h2>No Brasil, o <em>CEP</em> define o destino.</h2>
+                <p class="lead">Populações periféricas vivem às margens de operações industriais sem nunca serem ouvidas sobre os impactos ambientais que sentem diariamente.</p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">47%</span>
+                        <span class="stat-label">dos brasileiros mais pobres vivem em áreas de risco ambiental alto (IBGE, 2023)</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">83%</span>
+                        <span class="stat-label">das comunidades afetadas por industrias nunca participaram de audiências ambientais</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">0</span>
+                        <span class="stat-label">ferramentas acessíveis e participativas de mapeamento de impacto ambiental popular</span>
+                    </div>
+                </div>
+                <div class="quote-block">
+                    <p>"O racismo ambiental não é acidente — é padrão. E padrões precisam de dados para serem desafiados."</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: A SOLUÇÃO -->
+        <div class="slide slide-solution" data-index="2">
+            <div class="slide-header">
+                <span class="slide-num">02</span>
+                <span class="slide-label">A Solução</span>
+            </div>
+            <div class="slide-body two-col">
+                <div class="col-text">
+                    <h2>Plataforma de <em>Cartografia Participativa</em></h2>
+                    <p>O EcoVoz inverte a lógica: em vez de governos e corporações decidirem de fora para dentro, é o próprio morador quem constrói a base de dados que o setor privado e o Estado precisam para agir com responsabilidade real.</p>
+                    <ul class="feature-list">
+                        <li><span class="feat-icon">🗺️</span> <strong>Mapa de Calor Interativo</strong> — Relatos por CEP com geolocalização automática</li>
+                        <li><span class="feat-icon">📋</span> <strong>Canal de Denúncias</strong> — Formulário acessível com categorização e gravidade</li>
+                        <li><span class="feat-icon">📊</span> <strong>Calculadoras ESG</strong> — ROI de ações sustentáveis e economia circular</li>
+                        <li><span class="feat-icon">♿</span> <strong>Acessibilidade Total</strong> — TTS, alto contraste, fonte para dislexia (e-MAG)</li>
+                        <li><span class="feat-icon">🛡️</span> <strong>Portal do Gestor</strong> — Ouvidoria com CRUD completo e exportação de dossiês PDF</li>
+                    </ul>
+                </div>
+                <div class="col-visual">
+                    <div class="mockup-browser">
+                        <div class="mockup-chrome">
+                            <div class="mockup-dots"><span></span><span></span><span></span></div>
+                            <div class="mockup-url">ecovoz.naturezapreta.com.br</div>
+                        </div>
+                        <div class="mockup-screen">
+                            <div class="map-viz">
+                                <div class="map-dot d1"></div>
+                                <div class="map-dot d2"></div>
+                                <div class="map-dot d3"></div>
+                                <div class="map-dot d4"></div>
+                                <div class="map-dot d5"></div>
+                                <div class="map-label">🔥 Mapa de Calor ao Vivo</div>
+                                <div class="map-legend">
+                                    <span class="leg-item" style="--c:#ef4444;">Alta gravidade</span>
+                                    <span class="leg-item" style="--c:#f59e0b;">Média</span>
+                                    <span class="leg-item" style="--c:#10b981;">Baixa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: DIFERENCIAL -->
+        <div class="slide slide-diff" data-index="3">
+            <div class="slide-header">
+                <span class="slide-num">03</span>
+                <span class="slide-label">Diferenciais</span>
+            </div>
+            <div class="slide-body">
+                <h2>O que torna o EcoVoz <em>único</em></h2>
+                <div class="diff-grid">
+                    <div class="diff-card">
+                        <div class="diff-icon">🧬</div>
+                        <h3>Dados de Baixo para Cima</h3>
+                        <p>Não importamos dados de terceiros. Cada relato é gerado pela própria comunidade — tornando a base única, hiperlocal e verificável.</p>
+                    </div>
+                    <div class="diff-card">
+                        <div class="diff-icon">⚡</div>
+                        <h3>Zero Dependência de Servidor</h3>
+                        <p>Tecnologia 100% web nativa (HTML + JS Vanilla + localStorage). Funciona offline, é portátil e implantável em qualquer infraestrutura existente.</p>
+                    </div>
+                    <div class="diff-card">
+                        <div class="diff-icon">🤝</div>
+                        <h3>ESG que Gera Retorno</h3>
+                        <p>As Calculadoras ESG transformam dados comunitários em métricas executivas concretas: ROI ambiental, economia circular e retorno reputacional.</p>
+                    </div>
+                    <div class="diff-card">
+                        <div class="diff-icon">♿</div>
+                        <h3>Acessibilidade de Verdade</h3>
+                        <p>TTS em português, régua de leitura, fonte para dislexia e alto contraste. Cumprimento ativo do e-MAG — não apenas declaratório.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: COMO FUNCIONA -->
+        <div class="slide slide-flow" data-index="4">
+            <div class="slide-header">
+                <span class="slide-num">04</span>
+                <span class="slide-label">Como Funciona</span>
+            </div>
+            <div class="slide-body">
+                <h2>Do relato ao <em>impacto real</em></h2>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-num">1</div>
+                        <div class="step-icon">📍</div>
+                        <h3>Cidadão Relata</h3>
+                        <p>Acessa o canal de denúncias, informa o CEP e descreve o impacto ambiental. Geolocalização automática via ViaCEP.</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-num">2</div>
+                        <div class="step-icon">🗺️</div>
+                        <h3>Mapa Atualiza</h3>
+                        <p>O relato aparece instantaneamente no mapa de calor interativo. A densidade de pontos revela padrões invisíveis de injustiça ambiental.</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-num">3</div>
+                        <div class="step-icon">📊</div>
+                        <h3>Dado Vira Métrica</h3>
+                        <p>Gestores e parceiros corporativos acessam o painel ESG e as calculadoras para traduzir os relatos em métricas de ação e ROI.</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-num">4</div>
+                        <div class="step-icon">🌱</div>
+                        <h3>Ação e Legado</h3>
+                        <p>Empresas e governos implementam soluções rastreáveis. O ciclo se fecha: a comunidade vê o resultado e confia no processo.</p>
+                    </div>
+                </div>
+                <div class="demo-link">
+                    <a href="C:\Users\User\Desktop\naturezapreta\index.html" target="_blank" class="btn-demo">🚀 Abrir Plataforma EcoVoz</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: APRENDIZADOS (PITCH) -->
+        <div class="slide slide-learn" data-index="5">
+            <div class="slide-header">
+                <span class="slide-num">05</span>
+                <span class="slide-label">Aprendizados do Pitch</span>
+            </div>
+            <div class="slide-body">
+                <h2>O que aprendemos ao <em>construir e apresentar</em></h2>
+                <div class="learn-grid">
+                    <div class="learn-card">
+                        <span class="learn-num">01</span>
+                        <h3>Problema antes da solução</h3>
+                        <p>Começar pelos dados de impacto (IBGE, Ipea) antes de mostrar o produto criou empatia imediata e justificou a relevância da plataforma.</p>
+                    </div>
+                    <div class="learn-card">
+                        <span class="learn-num">02</span>
+                        <h3>Demo ao vivo vale mais</h3>
+                        <p>Navegar pelo mapa de calor em tempo real durante o pitch foi mais convincente do que qualquer slide estático com capturas de tela.</p>
+                    </div>
+                    <div class="learn-card">
+                        <span class="learn-num">03</span>
+                        <h3>Tom de proposta, não de acusação</h3>
+                        <p>Ao apresentar para executivos, a linguagem focou em "fortalecer" e "proteger" a empresa parceira — nunca em expor ou culpar.</p>
+                    </div>
+                    <div class="learn-card">
+                        <span class="learn-num">04</span>
+                        <h3>Antecipe as objeções</h3>
+                        <p>Perguntas sobre segurança dos dados, escalabilidade e manutenção foram preparadas antecipadamente — e isso aumentou a credibilidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: ENCERRAMENTO / CTA -->
+        <div class="slide slide-cta" data-index="6">
+            <div class="cover-bg"></div>
+            <div class="cover-content">
+                <div class="cta-icon">🤝</div>
+                <h2 class="cta-title">Vamos construir isso juntos?</h2>
+                <p class="cta-lead">O EcoVoz é a ponte entre quem sente o problema<br>e quem tem o poder de resolvê-lo.</p>
+                <div class="cta-links">
+                    <a href="C:\Users\User\Desktop\naturezapreta\index.html" target="_blank" class="btn-primary">Ver Plataforma ↗</a>
+                    <a href="../../index.html" class="btn-secondary">← Portal de Atividades</a>
+                </div>
+                <div class="cta-meta">
+                    Marcos Paulo Figueroa · Marentropico · 2026<br>
+                    Trilha: Comunicação Digital e Empreendedorismo · Atividade 5
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

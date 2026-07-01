@@ -104,6 +104,7 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 | 2 | Anúncio Magnético — Nocturna Café | [`Atividade 2/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%202/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%202/index.html) |
 | 3 | Canvas de Projeto — Umimbae Hub | [`Atividade 3/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%203/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%203/index.html) |
 | 4 | Plano de Reenquadramento (MVP) | [`Atividade 4/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%204/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%204/index.html) |
+| 5 | Pitch Deck — EcoVoz Natureza Preta | [`Atividade 5/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%205/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%205/index.html) |
 
 ---
 
@@ -156,7 +157,8 @@ atividades-proz/
     ├── Atividade 1/   (O Peso de uma Vírgula)
     ├── Atividade 2/   (Anúncio Nocturna Café)
     ├── Atividade 3/   (Canvas Umimbae Hub)
-    └── Atividade 4/   (Plano Reenquadramento Planejador)
+    ├── Atividade 4/   (Plano Reenquadramento Planejador)
+    └── Atividade 5/   (Pitch Deck EcoVoz Natureza Preta)
 ```
 
 ---
