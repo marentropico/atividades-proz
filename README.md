@@ -77,6 +77,7 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 | 1 | Identidade Digital & Comportamento (Matuê) | [`Atividade 1/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%201/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%201/index.html) |
 | 2 | Combate à Desinformação — Fato ou Fake | [`Atividade 2/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%202/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%202/index.html) |
 | 3 | Cibersegurança — Relato & Prevenção | [`Atividade 3/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%203/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%203/index.html) |
+| 4 | Perfil Profissional Digital | [`Atividade 4/index.html`](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%204/index.html) | [🔗 Abrir](./Letramento%20Digital%20como%20Ferramenta%20de%20Cidadania%20e%20Produtividade/Atividade%204/index.html) |
 
 ---
 
@@ -112,7 +113,8 @@ atividades-proz/
 └── Letramento Digital como Ferramenta de Cidadania e Produtividade/
     ├── Atividade 1/   (Identidade Digital - Matuê)
     ├── Atividade 2/   (Desinformação - Madonna Copacabana)
-    └── Atividade 3/   (Cibersegurança - Estudo de Caso)
+    ├── Atividade 3/   (Cibersegurança - Estudo de Caso)
+    └── Atividade 4/   (Perfil Profissional Digital)
 ```
 
 ---
