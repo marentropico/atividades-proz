@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo de Priorização Diária (Office-Flow)</title>
+    <meta name="description" content="Simulação interativa de algoritmo lógico de priorização e organização do dia de trabalho com tratamento de condicionais e exceções.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="glow-bg"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <p class="header-tag">Atividade 4 · Pensamento Computacional com Aplicação Imediata</p>
+        <h1 class="header-title">Algoritmo de Organização: <span>Office-Flow</span></h1>
+        <p class="header-sub">Um fluxograma de decisões interativo para triagem, priorização e tratamento de exceções na rotina diária do escritório.</p>
+        <div class="author-badge">
+            <strong>Responsável:</strong> Marcos Paulo Figueroa (Marentropico)
+        </div>
+    </header>
+
+    <main class="main-layout">
+        
+        <!-- PAINEL DE SIMULAÇÃO (ESQUERDA) -->
+        <section class="control-panel">
+            
+            <div class="panel-card scenario-selector">
+                <h3>🛠️ Escolha um Cenário Diário</h3>
+                <p class="scenario-intro">Selecione uma situação ou imprevisto abaixo para ver como o algoritmo processa e resolve o fluxo de trabalho.</p>
+                
+                <div class="scenarios-list">
+                    <button class="scenario-btn active" data-scenario="normal">
+                        <strong>Cenário 1: Triagem Inicial</strong>
+                        <span>Classificar e organizar a mesa desordenada</span>
+                    </button>
+                    <button class="scenario-btn" data-scenario="urgente">
+                        <strong>Cenário 2: Tarefa Urgente Única</strong>
+                        <span>Lidar com prazo iminente crítico</span>
+                    </button>
+                    <button class="scenario-btn" data-scenario="multi-urgente">
+                        <strong>Cenário 3: Múltiplas Urgências</strong>
+                        <span>Duas entregas críticas acumuladas</span>
+                    </button>
+                    <button class="scenario-btn" data-scenario="ajuda-colega">
+                        <strong>Cenário 4: Pedido de Ajuda</strong>
+                        <span>Coleira pede suporte durante tarefa importante</span>
+                    </button>
+                    <button class="scenario-btn" data-scenario="arquivo-ausente">
+                        <strong>Cenário 5: Recurso Bloqueado</strong>
+                        <span>Um arquivo essencial sumiu da rede</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resposta Explicativa Dinâmica -->
+            <div class="panel-card explanation-box">
+                <h3>📝 Explicação Lógica</h3>
+                <div class="explanation-content" id="explanation-content">
+                    <!-- JS preenche aqui -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ALGORITMO VISUAL / PASSOS (DIREITA) -->
+        <section class="algorithm-panel">
+            
+            <div class="algo-card">
+                <h3>⚙️ Passos Lógicos do Algoritmo</h3>
+                <p class="flow-tip">Os blocos abaixo se iluminam conforme a lógica do cenário escolhido.</p>
+
+                <div class="steps-flow">
+                    
+                    <!-- Passo 1: Triagem -->
+                    <div class="step-node" id="step-triagem">
+                        <span class="step-num">Passo 1</span>
+                        <h4>Triagem e Classificação</h4>
+                        <p class="step-desc">Listar todas as tarefas e separar em Urgentes, Importantes e Rotineiras.</p>
+                    </div>
+
+                    <div class="flow-connector">↓</div>
+
+                    <!-- Condicional: É urgente? -->
+                    <div class="step-node cond" id="cond-urgente">
+                        <span class="step-num">Se (Urgente?)</span>
+                        <h4>A tarefa tem prazo crítico iminente?</h4>
+                    </div>
+
+                    <div class="flow-connector">↓</div>
+
+                    <!-- Condicional: Múltiplas urgências? -->
+                    <div class="step-node cond" id="cond-multi-urgente">
+                        <span class="step-num">Se (Múltiplas?)</span>
+                        <h4>Existe mais de uma urgência?</h4>
+                    </div>
+
+                    <div class="flow-connector">↓</div>
+
+                    <!-- Resolução: Priorizar Urgências -->
+                    <div class="step-node action" id="action-priorizar-urgencias">
+                        <span class="step-num">Então</span>
+                        <h4>Ordenar por Esforço vs. Impacto</h4>
+                        <p class="step-desc">Fazer primeiro a tarefa de menor esforço e maior impacto (Quick Win), depois as demais.</p>
+                    </div>
+
+                    <div class="flow-connector">↓</div>
+
+                    <!-- Condicional: Arquivo indisponível? -->
+                    <div class="step-node cond" id="cond-arquivo">
+                        <span class="step-num">Se (Arquivo Ausente?)</span>
+                        <h4>O arquivo/recurso está acessível?</h4>
+                    </div>
+
+                    <div class="flow-connector">↓</div>
+
+                    <!-- Ação: Contingência de Arquivo -->
+                    <div class="step-node action" id="action-contingencia-arquivo">
+                        <span class="step-num">Senão</span>
+                        <h4>Acionar Responsável & Ir para Fila</h4>
+                        <p class="step-desc">Enviar solicitação de liberação e avançar para a próxima tarefa enquanto aguarda (evita travar).</p>
+                    </div>
+
+                    <div class="flow-connector">↓</div>
+
+                    <!-- Condicional: Pedido de Ajuda de Colega? -->
+                    <div class="step-node cond" id="cond-ajuda">
+                        <span class="step-num">Se (Ajuda Colega?)</span>
+                        <h4>Colega solicita ajuda no meio da tarefa?</h4>
+                    </div>
+
+                    <div class="flow-connector">↓</div>
+
+                    <!-- Ação: Negociar Ajuda -->
+                    <div class="step-node action" id="action-negociar-ajuda">
+                        <span class="step-num">Resolver</span>
+                        <h4>Negociar Interrupção</h4>
+                        <p class="step-desc">Se a ajuda levar menos de 5 min: apoiar. Senão: agendar um horário logo após concluir a tarefa importante atual.</p>
+                    </div>
+
+                    <div class="flow-connector">↓</div>
+
+                    <!-- Fim do Fluxo -->
+                    <div class="step-node end" id="step-fim">
+                        <span class="step-num">Fim</span>
+                        <h4>Tarefa Concluída</h4>
+                        <p class="step-desc">Atualizar checklist e avançar para o próximo item do algoritmo.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2026 Marcos Paulo Figueroa · Marentropico</p>
+        <p>Trilha: Pensamento Computacional com Aplicação Imediata · Atividade 4</p>
+        <p><a href="../../index.html">← Voltar ao Portal de Atividades</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

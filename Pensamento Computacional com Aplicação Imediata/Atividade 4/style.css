@@ -1,0 +1,381 @@
+/* =============================================
+   Algoritmo de Priorização Diária (Office-Flow)
+   Estilos CSS do Dashboard e Nós do Algoritmo
+   ============================================= */
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #09090b;
+    --bg-card: #121218;
+    --border: rgba(255, 255, 255, 0.05);
+    
+    --text: #e1e1e6;
+    --muted: #858292;
+    
+    --color-blue: #3498db;
+    --color-orange: #e67e22;
+    --color-green: #2ecc71;
+    --color-purple: #9b59b6;
+    --color-red: #e74c3c;
+    
+    --f-title: 'Plus Jakarta Sans', sans-serif;
+    --f-body: 'Plus Jakarta Sans', sans-serif;
+    --f-code: 'Fira Code', monospace;
+    --radius: 12px;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--f-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 3rem;
+}
+
+/* Ambient glow */
+.glow-bg {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(130, 87, 229, 0.04) 0%, rgba(230, 126, 34, 0.03) 50%, transparent 100%);
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ======================== HEADER ======================== */
+.header {
+    text-align: center;
+    padding: 5rem 1.5rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-tag {
+    font-family: var(--f-code);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--color-orange);
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.01em;
+}
+
+.header-title {
+    font-family: var(--f-title);
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 0.8rem;
+}
+
+.header-title span {
+    background: linear-gradient(135deg, var(--color-orange), var(--color-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-sub {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.author-badge {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 1.2rem;
+}
+
+.author-badge strong {
+    color: var(--color-orange);
+    margin-right: 0.25rem;
+}
+
+/* ======================== MAIN LAYOUT ======================== */
+.main-layout {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* ======================== LEFT COLUMN: SCENARIOS ======================== */
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.panel-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+}
+
+.panel-card h3 {
+    font-family: var(--f-title);
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    border-left: 3px solid var(--color-orange);
+    padding-left: 0.6rem;
+}
+
+.scenario-intro {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+}
+
+.scenarios-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.scenario-btn {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.scenario-btn strong {
+    font-family: var(--f-title);
+    font-size: 0.82rem;
+    color: var(--text);
+    transition: color 0.2s;
+}
+
+.scenario-btn span {
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+
+.scenario-btn:hover {
+    background: rgba(255,255,255,0.02);
+    border-color: rgba(255,255,255,0.1);
+}
+
+.scenario-btn.active {
+    background: rgba(230, 126, 34, 0.04);
+    border-color: var(--color-orange);
+}
+
+.scenario-btn.active strong {
+    color: var(--color-orange);
+}
+
+/* Explanation Box */
+.explanation-content {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.explanation-content p {
+    margin-bottom: 0.8rem;
+}
+
+.explanation-content p:last-child {
+    margin-bottom: 0;
+}
+
+.explanation-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.explanation-content li {
+    padding-left: 1rem;
+    position: relative;
+}
+
+.explanation-content li::before {
+    content: '➔';
+    position: absolute;
+    left: 0;
+    color: var(--color-orange);
+}
+
+.explanation-content strong {
+    color: var(--text);
+}
+
+/* ======================== RIGHT COLUMN: ALGORITHM FLOW ======================== */
+.algorithm-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.algo-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.2rem;
+}
+
+.algo-card h3 {
+    font-family: var(--f-title);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.flow-tip {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+}
+
+.steps-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Flow connector arrows */
+.flow-connector {
+    font-family: var(--f-code);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.05);
+    margin: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.flow-connector.active {
+    color: var(--color-orange);
+    text-shadow: 0 0 10px var(--color-orange)88;
+}
+
+/* Step Node Box */
+.step-node {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem 1.4rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.01);
+    transition: all 0.3s ease;
+    opacity: 0.25; /* dimmed by default */
+}
+
+.step-node h4 {
+    font-family: var(--f-title);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--muted);
+    transition: color 0.3s;
+}
+
+.step-num {
+    font-family: var(--f-code);
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--muted);
+    transition: color 0.3s;
+}
+
+.step-desc {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    line-height: 1.5;
+}
+
+/* Node type colors */
+.step-node.cond { --theme: var(--color-orange); }
+.step-node.action { --theme: var(--color-green); }
+.step-node.end { --theme: var(--color-purple); }
+.step-node:not(.cond):not(.action):not(.end) { --theme: var(--color-blue); }
+
+/* Glowing active node style */
+.step-node.active {
+    opacity: 1;
+    border-color: var(--theme);
+    background: rgba(255,255,255,0.02);
+    box-shadow: 0 0 20px var(--theme)1a;
+}
+
+.step-node.active h4 {
+    color: var(--text);
+}
+
+.step-node.active .step-num {
+    color: var(--theme);
+}
+
+/* ======================== FOOTER ======================== */
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    margin-top: 6rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 2;
+    width: 100%;
+    clear: both;
+}
+
+.footer a {
+    color: var(--color-orange);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ======================== RESPONSIVIDADE ======================== */
+@media (max-width: 850px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .header {
+        padding: 4rem 1.2rem 2.5rem;
+    }
+    
+    .algo-card {
+        padding: 1.5rem;
+    }
+}
