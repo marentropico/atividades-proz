@@ -92,6 +92,7 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 | 3 | LoopQuest — O Tabuleiro Binário | [`Atividade 3/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%203/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%203/index.html) |
 | 4 | Algoritmo de Priorização Diária | [`Atividade 4/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%204/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%204/index.html) |
 | 5 | AutoFlow — Automações de Processo | [`Atividade 5/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%205/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%205/index.html) |
+| 6 | Pitch Inovação — EcoPonto Digital | [`Atividade 6/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%206/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%206/index.html) |
 
 ---
 
@@ -137,7 +138,8 @@ atividades-proz/
     ├── Atividade 2/   (Fluxo de Projeto)
     ├── Atividade 3/   (Jogo LoopQuest)
     ├── Atividade 4/   (Priorização Diária)
-    └── Atividade 5/   (Automações AutoFlow)
+    ├── Atividade 5/   (Automações AutoFlow)
+    └── Atividade 6/   (Pitch EcoPonto Digital)
 ```
 
 ---
