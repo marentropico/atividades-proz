@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFlow: Circuito de Automações do Produto</title>
+    <meta name="description" content="Mapeamento e simulação interativa de circuitos de automação de fluxo de trabalho para equipes de desenvolvimento de produto digital.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="circuit-bg"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <p class="header-tag">Atividade 5 · Pensamento Computacional com Aplicação Imediata</p>
+        <h1 class="header-title">Automação de Processos: <span>AutoFlow</span></h1>
+        <p class="header-sub">Circuitos de automação de trabalho integrados para eliminar gargalos de reuniões, registrar decisões e sincronizar tarefas.</p>
+        <div class="author-badge">
+            <strong>Mapeado por:</strong> Marcos Paulo Figueroa (Marentropico)
+        </div>
+    </header>
+
+    <main class="main-layout">
+        
+        <!-- SELEÇÃO DE INTEGRAÇÕES & RISCOS (ESQUERDA) -->
+        <section class="info-column">
+            
+            <!-- Selecionar Fluxo para Simular -->
+            <div class="info-card select-flow">
+                <h3>⚡ Escolha a Automação</h3>
+                <p class="card-intro">Selecione uma receita de automação para rodar a simulação visual do circuito.</p>
+                <div class="flow-selector">
+                    <button class="flow-btn active" data-flow="reunioes">
+                        <strong>Automação 1: Agendamento</strong>
+                        <span>Calendário ➔ Slack ➔ Google Docs</span>
+                    </button>
+                    <button class="flow-btn" data-flow="decisoes">
+                        <strong>Automação 2: Registro</strong>
+                        <span>IA Transcrição ➔ Resumo ➔ E-mail</span>
+                    </button>
+                    <button class="flow-btn" data-flow="tarefas">
+                        <strong>Automação 3: Sincronização</strong>
+                        <span>Trello/Jira ➔ Slack ➔ Relatório</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Riscos e Limitações -->
+            <div class="info-card risks-box">
+                <h3>⚠️ Riscos e Limitações</h3>
+                <div class="risk-item">
+                    <strong>Falha de Integração (API Down)</strong>
+                    <p>Se as chaves de conexão expirarem, as transcrições podem falhar. <em>Contingência:</em> Configurar alerta de e-mail automático em caso de erro 500.</p>
+                </div>
+                <div class="risk-item">
+                    <strong>Poluição de Notificações (Spam)</strong>
+                    <p>Muitas mensagens automáticas no Slack podem fazer a equipe ignorar o canal. <em>Contingência:</em> Agrupar atualizações de tarefas em resumos diários (Digest).</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CIRCUITO VISUAL / SIMULADOR (DIREITA) -->
+        <section class="circuit-column">
+            
+            <div class="circuit-card">
+                <div class="card-header-flex">
+                    <h3 class="card-title">// Simulador de Integrações (n8n/Zapier Style)</h3>
+                    <button class="btn-simulate" id="btn-simulate">Testar Circuito 🚀</button>
+                </div>
+                <p class="flow-tip">Clique em "Testar Circuito" para ver o fluxo de dados correndo entre as ferramentas.</p>
+
+                <div class="nodes-container" id="nodes-container">
+                    <!-- O JS monta dinamicamente o fluxo aqui -->
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2026 Marcos Paulo Figueroa · Marentropico</p>
+        <p>Trilha: Pensamento Computacional com Aplicação Imediata · Atividade 5</p>
+        <p><a href="../../index.html">← Voltar ao Portal de Atividades</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -91,6 +91,7 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 | 2 | Modelagem Visual — Fluxo de Projeto | [`Atividade 2/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%202/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%202/index.html) |
 | 3 | LoopQuest — O Tabuleiro Binário | [`Atividade 3/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%203/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%203/index.html) |
 | 4 | Algoritmo de Priorização Diária | [`Atividade 4/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%204/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%204/index.html) |
+| 5 | AutoFlow — Automações de Processo | [`Atividade 5/index.html`](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%205/index.html) | [🔗 Abrir](./Pensamento%20Computacional%20com%20Aplica%C3%A7%C3%A3o%20Imediata/Atividade%205/index.html) |
 
 ---
 
@@ -135,7 +136,8 @@ atividades-proz/
     ├── Atividade 1/   (Desperdício no Refeitório)
     ├── Atividade 2/   (Fluxo de Projeto)
     ├── Atividade 3/   (Jogo LoopQuest)
-    └── Atividade 4/   (Priorização Diária)
+    ├── Atividade 4/   (Priorização Diária)
+    └── Atividade 5/   (Automações AutoFlow)
 ```
 
 ---
