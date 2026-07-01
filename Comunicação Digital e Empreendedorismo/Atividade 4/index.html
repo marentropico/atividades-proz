@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Reenquadramento - Planejador Financeiro</title>
+    <meta name="description" content="Estratégia de redução de escopo e lançamento acelerado em 6 semanas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <p class="tag">Atividade 4 · Comunicação Digital e Empreendedorismo</p>
+        <h1>Plano de Reenquadramento: <span>MVP 6 Semanas</span></h1>
+        <p>Como salvar um projeto após um corte de orçamento de 50%, garantindo entrega de valor e comunicação transparente com o usuário.</p>
+    </header>
+
+    <main class="content-layout">
+
+        <!-- O PLANO DE REENQUADRAMENTO -->
+        <section class="reframing-board">
+            
+            <div class="board-header">
+                <h2>O Novo Cenário: De 3 meses para 6 semanas</h2>
+            </div>
+
+            <div class="board-grid">
+                
+                <!-- 1. Redistribuição -->
+                <div class="board-card">
+                    <div class="card-icon">👥</div>
+                    <h3>1. Redistribuição de Papéis</h3>
+                    <p>O foco total passa a ser no motor central (lógica de fluxo de caixa). Os designers, antes focados em múltiplas telas de relatórios, agora apoiam a engenharia no CSS. O Gerente de Projetos assume também o QA para desafogar o time técnico.</p>
+                </div>
+
+                <!-- 2. Priorização MVP -->
+                <div class="board-card">
+                    <div class="card-icon">✂️</div>
+                    <h3>2. Priorização (Cortes)</h3>
+                    <p><strong>O que fica:</strong> Adição de Entradas/Saídas e visualização de saldo atual e do mês em formato de calendário.<br>
+                    <strong>O que sai:</strong> Relatórios detalhados em PDF, gráficos anuais interativos, modo "Simulador de Investimentos" e sincronização multi-dispositivo.</p>
+                </div>
+
+                <!-- 3. Soluções Criativas -->
+                <div class="board-card">
+                    <div class="card-icon">💡</div>
+                    <h3>3. Soluções Criativas</h3>
+                    <p>Ao invés de programarmos um banco de dados relacional complexo, a versão de 6 semanas usará <strong>LocalStorage</strong> (armazenamento no próprio navegador). Isso reduz o tempo de desenvolvimento back-end de 4 semanas para zero.</p>
+                </div>
+
+                <!-- 4. Comunicação -->
+                <div class="board-card">
+                    <div class="card-icon">📢</div>
+                    <h3>4. Comunicação ao Investidor/Usuário</h3>
+                    <p><strong>Estratégia:</strong> "Lançamento Lean". Avisaremos que esta é uma versão *Early Access* (Acesso Antecipado) focada no essencial. "Lançamos rápido para ouvir você primeiro. O controle de gastos básico já está nas suas mãos!".</p>
+                </div>
+
+                <!-- 5. Aprendizados -->
+                <div class="board-card highlight-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>5. Aprendizados Registrados</h3>
+                    <p>A maior lição é que o <em>Core Value</em> (valor central) de um projeto financeiro não está nos gráficos brilhantes, mas sim em **saber quanto dinheiro sobrou no fim do mês**. Cortes forçam o time a eliminar as distrações e entregar a solução real mais rápido.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- O PROTÓTIPO FUNCIONAL -->
+        <section class="prototype-section">
+            <div class="prototype-header">
+                <h2>Protótipo Funcional (Sem Login)</h2>
+                <p>Nesta versão clonada, o login foi desativado para demonstração no portfólio. A versão real em produção do Umimbae requer conta.</p>
+                <div class="prototype-actions">
+                    <a href="app/index.html" target="_blank" class="btn btn-primary">Abrir Aplicativo (Tela Cheia) ↗</a>
+                    <a href="https://umimbae.com.br/planejador_financeiro/" target="_blank" class="btn btn-secondary">Ver App Oficial (Umimbae) ↗</a>
+                </div>
+            </div>
+
+            <div class="app-frame-container">
+                <div class="browser-chrome">
+                    <div class="dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="address-bar">localhost/planejador/app/index.html</div>
+                </div>
+                <!-- Iframe do App React Buildado -->
+                <iframe src="app/index.html" class="app-iframe" title="Planejador Financeiro MVP"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Marcos Paulo Figueroa · Marentropico</p>
+        <p>Trilha: Comunicação Digital e Empreendedorismo · Atividade 4</p>
+        <p><a href="../../index.html">← Voltar ao Portal de Atividades</a></p>
+    </footer>
+
+</body>
+</html>
