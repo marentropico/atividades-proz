@@ -1,0 +1,407 @@
+/* =============================================
+   Pensamento Computacional: Fluxograma de Projeto
+   Estilos CSS do Layout do Dashboard e Nós
+   ============================================= */
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #07070a;
+    --bg-card: #0f0e15;
+    --border: rgba(255, 255, 255, 0.05);
+    
+    --text: #e1e1e6;
+    --muted: #807d8f;
+    
+    --color-blue: #3498db;
+    --color-green: #2ecc71;
+    --color-orange: #e67e22;
+    --color-red: #e74c3c;
+    
+    --f-title: 'Plus Jakarta Sans', sans-serif;
+    --f-body: 'Plus Jakarta Sans', sans-serif;
+    --f-code: 'Fira Code', monospace;
+    --radius: 10px;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--f-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 3rem;
+}
+
+/* Ambient glow */
+.glow-bg {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.06) 0%, rgba(130, 87, 229, 0.03) 50%, transparent 100%);
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ======================== HEADER ======================== */
+.header {
+    text-align: center;
+    padding: 5rem 1.5rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-tag {
+    font-family: var(--f-code);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--color-blue);
+    margin-bottom: 1rem;
+}
+
+.header-title {
+    font-family: var(--f-title);
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.header-title span {
+    background: linear-gradient(135deg, var(--color-blue), var(--color-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-sub {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.author-badge {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1.1rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 1.5rem;
+}
+
+.author-badge strong {
+    color: var(--color-blue);
+    margin-right: 0.25rem;
+}
+
+/* ======================== LAYOUT ======================== */
+.main-layout {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* ======================== LEFT COLUMN: Q&A ======================== */
+.qa-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.qa-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.8rem;
+}
+
+.card-title {
+    font-family: var(--f-code);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-blue);
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Radio list option items */
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--border);
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--radius);
+    cursor: default;
+    opacity: 0.5;
+}
+
+.option-item.selected {
+    opacity: 1;
+    border-color: var(--color-blue);
+    background: rgba(52, 152, 219, 0.03);
+}
+
+.option-item input {
+    display: none;
+}
+
+.custom-radio {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--muted);
+    display: inline-block;
+    position: relative;
+}
+
+.custom-radio.checked {
+    border-color: var(--color-blue);
+}
+
+.custom-radio.checked::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-blue);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.option-text {
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.justification-text {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+}
+
+.justification-text:last-child {
+    margin-bottom: 0;
+}
+
+.justification-text strong {
+    color: var(--text);
+}
+
+.sim-text {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+}
+
+.btn-run {
+    width: 100%;
+    background: linear-gradient(135deg, var(--color-blue) 0%, #1e6091 100%);
+    border: none;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-family: var(--f-title);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-run:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+/* ======================== RIGHT COLUMN: FLUXOGRAMA ======================== */
+.flowchart-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flowchart-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.2rem;
+}
+
+.flow-tip {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: -0.8rem;
+    margin-bottom: 2rem;
+}
+
+.flowchart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Base Node style */
+.flow-node {
+    width: 100%;
+    max-width: 250px;
+    padding: 1rem 1.2rem;
+    border-radius: var(--radius);
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.01);
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.flow-node h4 {
+    font-family: var(--f-title);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--muted);
+    transition: color 0.3s;
+}
+
+.node-badge {
+    font-family: var(--f-code);
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--muted);
+    transition: color 0.3s;
+}
+
+/* Arrows */
+.flow-arrow {
+    font-family: var(--f-code);
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.1);
+    margin: 0.4rem 0;
+    transition: color 0.3s;
+}
+
+.flow-arrow.active {
+    color: var(--color-blue);
+    text-shadow: 0 0 10px var(--color-blue);
+}
+
+/* Node specific classifications */
+.node-start {
+    --theme: var(--color-blue);
+}
+.node-process {
+    --theme: var(--color-green);
+}
+.node-decision {
+    --theme: var(--color-orange);
+}
+
+/* Decision Nodes specific labels */
+.decision-paths {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--f-code);
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    border-top: 1px dashed var(--border);
+    padding-top: 0.4rem;
+}
+
+/* End split grid */
+.flow-end-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 480px;
+}
+
+.flow-end-container .flow-node {
+    max-width: 100%;
+}
+
+/* Glowing active states during simulation */
+.flow-node.active {
+    border-color: var(--theme);
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 0 20px var(--theme)22;
+}
+
+.flow-node.active h4 {
+    color: var(--text);
+}
+
+.flow-node.active .node-badge {
+    color: var(--theme);
+}
+
+.flow-node.active .decision-paths {
+    border-color: rgba(255,255,255,0.12);
+}
+
+/* ======================== FOOTER ======================== */
+.footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 2;
+}
+
+.footer a {
+    color: var(--color-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ======================== RESPONSIVIDADE ======================== */
+@media (max-width: 850px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .header {
+        padding: 4rem 1.2rem 2.5rem;
+    }
+    
+    .flowchart-card {
+        padding: 1.5rem;
+    }
+}

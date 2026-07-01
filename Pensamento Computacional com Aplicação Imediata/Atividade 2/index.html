@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensamento Computacional: Fluxograma de Projeto</title>
+    <meta name="description" content="Análise e elaboração de fluxograma interativo para planejamento de projeto de marketing com condicionais lógicas. Atividade 2 de Pensamento Computacional.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="glow-bg"></div>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <p class="header-tag">Atividade 2 · Pensamento Computacional com Aplicação Imediata</p>
+        <h1 class="header-title">Modelagem Visual: <span>Fluxo de Projeto</span></h1>
+        <p class="header-sub">Seleção de esquema visual e simulação interativa de processos com condicionais lógicas para projetos de marketing.</p>
+        <div class="author-badge">
+            <strong>Responsável:</strong> Marcos Paulo Figueroa (Marentropico)
+        </div>
+    </header>
+
+    <main class="main-layout">
+
+        <!-- COLUNA DA ESQUERDA: PERGUNTAS E JUSTIFICATIVA -->
+        <section class="qa-column">
+            
+            <!-- Escolha da Ferramenta -->
+            <div class="qa-card reveal">
+                <h3 class="card-title">// 1. Seleção do Esquema</h3>
+                <div class="options-list">
+                    <label class="option-item">
+                        <input type="radio" name="schemes" disabled>
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Tabela</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="schemes" disabled>
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Lista</span>
+                    </label>
+                    <label class="option-item selected">
+                        <input type="radio" name="schemes" checked disabled>
+                        <span class="custom-radio checked"></span>
+                        <span class="option-text">Fluxograma (Escolha Correta)</span>
+                    </label>
+                    <label class="option-item">
+                        <input type="radio" name="schemes" disabled>
+                        <span class="custom-radio"></span>
+                        <span class="option-text">Mapa Mental</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Justificativa -->
+            <div class="qa-card reveal">
+                <h3 class="card-title">// 2. Justificativa Técnica</h3>
+                <p class="justification-text">
+                    A situação descrita envolve uma <strong>sequência lógica de etapas</strong> e, crucialmente, <strong>pontos de tomada de decisão (condicionais)</strong>: se o conteúdo for aprovado, ele é lançado; se o engajamento for bom, postam-se novos conteúdos em paralelo. 
+                </p>
+                <p class="justification-text">
+                    O <strong>Fluxograma</strong> é a única das ferramentas listadas capaz de representar desvios condicionais ("Se... Então") de forma gráfica e padronizada, permitindo que a equipe visualize caminhos alternativos e iterações de re-trabalho (loops de revisão) com facilidade.
+                </p>
+            </div>
+
+            <!-- Simulação -->
+            <div class="qa-card reveal">
+                <h3 class="card-title">// 3. Simulador de Fluxo</h3>
+                <p class="sim-text">Clique no botão abaixo para rodar o algoritmo e ver o fluxo de execução avançar pelas etapas do projeto.</p>
+                <button class="btn-run" id="btn-run">Executar Simulação ⚡</button>
+            </div>
+
+        </section>
+
+        <!-- COLUNA DA DIREITA: FLUXOGRAMA INTERATIVO -->
+        <section class="flowchart-column">
+            
+            <div class="flowchart-card">
+                <h3 class="card-title">// 3. Esquema Visual do Processo</h3>
+                <p class="flow-tip">Os nós se iluminam dinamicamente durante a execução da simulação.</p>
+
+                <div class="flowchart-container">
+                    
+                    <!-- Nó 1: Início -->
+                    <div class="flow-node node-start" id="step-inicio">
+                        <span class="node-badge">Iniciar</span>
+                        <h4>Planejamento</h4>
+                    </div>
+
+                    <div class="flow-arrow">↓</div>
+
+                    <!-- Nó 2: Criar Conteúdo -->
+                    <div class="flow-node node-process" id="step-criar">
+                        <span class="node-badge">Processo</span>
+                        <h4>Criar Conteúdo</h4>
+                    </div>
+
+                    <div class="flow-arrow">↓</div>
+
+                    <!-- Nó 3: Revisão -->
+                    <div class="flow-node node-process" id="step-revisar">
+                        <span class="node-badge">Processo</span>
+                        <h4>Revisar Conteúdo</h4>
+                    </div>
+
+                    <div class="flow-arrow">↓</div>
+
+                    <!-- Nó 4: Decisão 1: Aprovado? -->
+                    <div class="flow-node node-decision" id="step-aprovado">
+                        <span class="node-badge">Decisão</span>
+                        <h4>Aprovado?</h4>
+                        <div class="decision-paths">
+                            <span class="path-no">Não (Ajustar)</span>
+                            <span class="path-yes">Sim</span>
+                        </div>
+                    </div>
+
+                    <!-- Linha de loop para correção (visível no desktop/mobile conceitual) -->
+                    <div class="flow-arrow">↓</div>
+
+                    <!-- Nó 5: Lançar -->
+                    <div class="flow-node node-process" id="step-lancar">
+                        <span class="node-badge">Processo</span>
+                        <h4>Lançar na Rede Social</h4>
+                    </div>
+
+                    <div class="flow-arrow">↓</div>
+
+                    <!-- Nó 6: Acompanhar -->
+                    <div class="flow-node node-process" id="step-acompanhar">
+                        <span class="node-badge">Processo</span>
+                        <h4>Acompanhar Resultados</h4>
+                    </div>
+
+                    <div class="flow-arrow">↓</div>
+
+                    <!-- Nó 7: Decisão 2: Alto Engajamento? -->
+                    <div class="flow-node node-decision" id="step-engajamento">
+                        <span class="node-badge">Decisão</span>
+                        <h4>Bom Engajamento?</h4>
+                        <div class="decision-paths">
+                            <span class="path-no">Não</span>
+                            <span class="path-yes">Sim</span>
+                        </div>
+                    </div>
+
+                    <div class="flow-arrow">↓</div>
+
+                    <!-- Nó 8: Ações Paralelas (Fim com desvios) -->
+                    <div class="flow-end-container">
+                        <div class="flow-node node-start" id="step-paralelo">
+                            <span class="node-badge">Executar</span>
+                            <h4>Novas Postagens</h4>
+                        </div>
+                        <div class="flow-node node-start" id="step-fim">
+                            <span class="node-badge">Finalizar</span>
+                            <h4>Fim do Ciclo</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>© 2026 Marcos Paulo Figueroa · Marentropico</p>
+        <p>Trilha: Pensamento Computacional com Aplicação Implícita e Imediata · Atividade 2</p>
+        <p><a href="../../index.html">← Voltar ao Portal de Atividades</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
