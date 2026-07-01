@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let energy = 100;
     let laps = 0;
     let isGameOver = false;
+    let freeRollPending = false; // evita clique duplo enquanto aguarda a rolagem grátis da casa LOOP
 
     // ---- Elementos do DOM ----
     const btnRoll = document.getElementById('btn-roll');
@@ -81,7 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Rolagem extra de graça (Casa 9)
     function rollDiceFree() {
+        freeRollPending = true;
+        btnRoll.disabled = true;
         setTimeout(() => {
+            freeRollPending = false;
             rollDiceAndMove();
         }, 1200);
     }
@@ -93,7 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (stepCount >= steps) {
                 // Chegou na casa de destino, aciona a ação da casa
                 executeTileAction(playerPosition);
-                btnRoll.disabled = false;
+                if (!freeRollPending) {
+                    btnRoll.disabled = false;
+                }
                 checkGameEndConditions();
                 return;
             }
@@ -122,6 +128,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         takeSingleStep();
+    }
+
+    // Move o jogador N casas para frente sem depender do dado (usado pela casa LOOP)
+    function moveForward(steps) {
+        for (let i = 0; i < steps; i++) {
+            document.querySelector(`.board-tile[data-index="${playerPosition}"]`).classList.remove('active');
+
+            playerPosition++;
+
+            if (playerPosition >= 12) {
+                playerPosition = 0;
+                laps++;
+                valLaps.innerText = laps;
+                modifyBits(20);
+                logMessage("➔ Loop Completado! Bônus de +20 Bits por ciclo finalizado.", "success");
+            }
+
+            document.querySelector(`.board-tile[data-index="${playerPosition}"]`).classList.add('active');
+        }
+
+        centerStatus.innerText = `Posição: Casa ${playerPosition}`;
     }
 
     function executeTileAction(position) {
@@ -187,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         energy = 100;
         laps = 0;
         isGameOver = false;
+        freeRollPending = false;
 
         // Reset visual
         document.querySelector(`.board-tile[data-index="0"]`).classList.add('active');
