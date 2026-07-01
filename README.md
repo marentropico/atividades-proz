@@ -105,6 +105,7 @@ Repositório de todas as atividades desenvolvidas durante o curso de Programaç�
 | 3 | Canvas de Projeto — Umimbae Hub | [`Atividade 3/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%203/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%203/index.html) |
 | 4 | Plano de Reenquadramento (MVP) | [`Atividade 4/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%204/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%204/index.html) |
 | 5 | Pitch Deck — EcoVoz Natureza Preta | [`Atividade 5/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%205/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%205/index.html) |
+| 6 | Mapa de Marca Pessoal — Umimbae | [`Atividade 6/index.html`](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%206/index.html) | [🔗 Abrir](./Comunica%C3%A7%C3%A3o%20Digital%20e%20Empreendedorismo/Atividade%206/index.html) |
 
 ---
 
@@ -158,7 +159,8 @@ atividades-proz/
     ├── Atividade 2/   (Anúncio Nocturna Café)
     ├── Atividade 3/   (Canvas Umimbae Hub)
     ├── Atividade 4/   (Plano Reenquadramento Planejador)
-    └── Atividade 5/   (Pitch Deck EcoVoz Natureza Preta)
+    ├── Atividade 5/   (Pitch Deck EcoVoz Natureza Preta)
+    └── Atividade 6/   (Mapa de Marca Pessoal Umimbae)
 ```
 
 ---
