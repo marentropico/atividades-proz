@@ -58,6 +58,10 @@ body::before {
     margin: 0 auto;
     padding: 4rem 2rem 2rem;
     border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .tag {
@@ -72,9 +76,10 @@ body::before {
 
 .brand-identity {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .brand-symbol {
@@ -561,11 +566,52 @@ body::before {
     z-index: 1;
     max-width: 1400px;
     margin: 2rem auto 0;
-    padding: 2rem;
+    padding: 3rem 2rem 2rem;
     border-top: 1px solid var(--border);
     text-align: center;
-    font-family: var(--f-mono);
     font-size: 0.75rem;
     color: var(--text-muted);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    background: rgba(255,255,255,0.02);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(199,91,57,0.06);
+    transform: translateY(-2px);
+}
+
+.footer-dot {
+    color: var(--accent);
+    opacity: 0.5;
+    font-weight: bold;
+    display: none; /* Hidden because we use button-style tags now */
+}
+
+.site-footer p {
+    font-family: var(--f-mono);
     line-height: 2;
+    margin-bottom: 0.3rem;
 }
